@@ -1,0 +1,246 @@
+/ {
+    behaviors {
+        leader: leader {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            l_ccomment    { sequence = <C C>; bindings = <&lk_ccomment>; };
+            l_cincludeqts { sequence = <C I>; bindings = <&lk_cinclude_qts>; };
+            l_cinclude    { sequence = <C Y>; bindings = <&lk_cinclude>; };
+            l_cdefine     { sequence = <C D>; bindings = <&lk_cdefine>; };
+            l_cstring     { sequence = <C S>; bindings = <&lk_cstring>; };
+            l_cvector     { sequence = <C V>; bindings = <&lk_cvector>; };
+
+            l_hbold       { sequence = <H B>; bindings = <&lk_hbold>; };
+            l_htag        { sequence = <H T>; bindings = <&lk_htag>; };
+            l_mlink       { sequence = <M L>; bindings = <&lk_mlink>; };
+            l_murl        { sequence = <M U>; bindings = <&lk_murl>; };
+            l_mimg        { sequence = <M I>; bindings = <&lk_mimg>; };
+            l_mfoot       { sequence = <M F>; bindings = <&lk_mfoot>; };
+            l_mbold       { sequence = <M B>; bindings = <&lk_mbold>; };
+            l_mslant      { sequence = <M S>; bindings = <&lk_mslant>; };
+
+            l_s_tsqts     { sequence = <S SQT>; bindings = <&lk_s_tsqts>; };
+            l_s_tsqts2    { sequence = <S S>; bindings = <&lk_s_tsqts>; };
+            l_s_tdqts     { sequence = <S D>; bindings = <&lk_s_tdqts>; };
+            l_s_tparen    { sequence = <S P>; bindings = <&lk_s_tparen>; };
+            l_s_tbrack    { sequence = <S R>; bindings = <&lk_s_tbrack>; };
+            l_s_tcurly    { sequence = <S Y>; bindings = <&lk_s_tcurly>; };
+
+            l_s_ccomment  { sequence = <S C>; bindings = <&lk_s_ccomment>; };
+            l_s_hbold     { sequence = <S B>; bindings = <&lk_s_hbold>; };
+            l_s_mbold     { sequence = <S O>; bindings = <&lk_s_mbold>; };        // Position of STAR in Symbols
+            l_s_mstrike   { sequence = <S N>; bindings = <&lk_s_mstrike>; };      // Position of MINUS in Symbols
+
+            l_priv_cemail { sequence = <X X>; bindings = <&priv_cemail>; };
+            l_priv_comp   { sequence = <X C>; bindings = <&priv_comp>; };
+            l_priv_comp2  { sequence = <X S>; bindings = <&priv_comp2>; };
+            l_priv_cdom   { sequence = <X D>; bindings = <&priv_cdom>; };
+            l_priv_cdom2  { sequence = <X T>; bindings = <&priv_cdom2>; };
+
+            l_priv_pemail { sequence = <Y Y>; bindings = <&priv_pemail>; };
+            l_priv_pdom1  { sequence = <Y D>; bindings = <&priv_pdom1>; };
+            l_priv_pdom2  { sequence = <Y M>; bindings = <&priv_pdom2>; };
+            l_priv_addr   { sequence = <Y A>; bindings = <&priv_addr>; };
+            //l_priv_street { sequence = <Y S>; bindings = <&priv_street>; };
+            l_priv_postc  { sequence = <Y P>; bindings = <&priv_postcode>; };
+            l_priv_town   { sequence = <Y T>; bindings = <&priv_town>; };
+        };
+    };
+
+    macros {
+        // Leader key macros
+        lk_ccomment: leader_c_comment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SLASH &kp STAR &kp SPC &kp SPC &kp STAR &kp SLASH>
+                , <&macro_tap &kp LEFT &kp LEFT &kp LEFT>
+                ;
+        };
+        lk_cinclude: leader_c_include {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp HASH &kp I &kp N &kp C &kp L &kp U &kp D &kp E &kp SPC>
+                ;
+        };
+        lk_cinclude_qts: leader_c_include_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp HASH &kp I &kp N &kp C &kp L &kp U &kp D &kp E &kp SPC>
+                , <&macro_tap &kp DQT &kp DQT &kp LEFT>
+                , <&macro_tap &kp DA_DQT2LTGT>
+                ;
+        };
+        lk_cdefine: leader_c_define {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp HASH &kp D &kp E &kp F &kp I &kp N &kp E &kp SPC>
+                ;
+        };
+        lk_cstring: leader_c_string {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp S &kp T &kp D &kp COLON &kp COLON &kp S &kp T &kp R &kp I &kp N &kp G>
+                ;
+        };
+        lk_cvector: leader_c_vector {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp S &kp T &kp D &kp COLON &kp COLON &kp V &kp E &kp C &kp T &kp O &kp R>
+                , <&macro_tap &kp LT &kp GT &kp LEFT>
+                ;
+        };
+        lk_hbold: leader_html_bold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LT &kp B &kp GT &kp LT &kp SLASH &kp B &kp GT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
+                ;
+        };
+        lk_htag: leader_html_empty_tag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LT &kp GT &kp LT &kp SLASH &kp GT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
+                ;
+        };
+        lk_mlink: leader_markdown_link {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LBKT &kp RBKT &kp LPAR &kp RPAR &kp LEFT &kp LEFT &kp LEFT>
+                ;
+        };
+        lk_murl: leader_markdown_url {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LBKT &kp RBKT &kp LPAR &kp LEFT &kp LEFT>
+                ;
+        };
+        lk_mimg: leader_markdown_image {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp EXCL &kp LBKT &kp RBKT &kp LPAR &kp RPAR &kp LEFT &kp LEFT &kp LEFT>
+                ;
+        };
+        lk_mfoot: leader_markdown_footnote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LBKT &kp CARET &kp RBKT &kp LEFT>
+                ;
+        };
+        lk_mbold: leader_markdown_bold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp STAR &kp STAR &kp STAR &kp STAR &kp LEFT &kp LEFT>
+                ;
+        };
+        lk_mslant: leader_markdown_slanted {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp STAR &kp STAR &kp LEFT>
+                ;
+        };
+        lk_s_ccomment: leader_selection_c_comment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LCTL &kp X>
+                , <&macro_tap &kp SLASH &kp STAR &kp SPC >
+                , <&macro_tap &sk LCTL &kp V>
+                , <&macro_tap &kp SPC &kp STAR &kp SLASH>
+                ;
+        };
+        lk_s_hbold: leader_selection_html_bold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LCTL &kp X>
+                , <&macro_tap &kp LT &kp B &kp GT>
+                , <&macro_tap &sk LCTL &kp V>
+                , <&macro_tap &kp LT &kp SLASH &kp B &kp GT>
+                ;
+        };
+        lk_s_mbold: leader_selection_markdown_bold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LCTL &kp X>
+                , <&macro_tap &kp STAR &kp STAR>
+                , <&macro_tap &sk LCTL &kp V>
+                , <&macro_tap &kp STAR &kp STAR>
+                ;
+        };
+        lk_s_mstrike: leader_selection_markdown_strike {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LCTL &kp X>
+                , <&macro_tap &kp TILDE &kp TILDE>
+                , <&macro_tap &sk LCTL &kp V>
+                , <&macro_tap &kp TILDE &kp TILDE>
+                ;
+        };
+        lk_s_tsqts: leader_selection_single_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LCTL &kp X>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &sk LCTL &kp V>
+                , <&macro_tap &kp SQT>
+                ;
+        };
+        lk_s_tdqts: leader_selection_double_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LCTL &kp X>
+                , <&macro_tap &kp DQT>
+                , <&macro_tap &sk LCTL &kp V>
+                , <&macro_tap &kp DQT>
+                ;
+        };
+        lk_s_tparen: leader_selection_parentheses {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LCTL &kp X>
+                , <&macro_tap &kp LPAR>
+                , <&macro_tap &sk LCTL &kp V>
+                , <&macro_tap &kp RPAR>
+                ;
+        };
+        lk_s_tbrack: leader_selection_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LCTL &kp X>
+                , <&macro_tap &kp LBKT>
+                , <&macro_tap &sk LCTL &kp V>
+                , <&macro_tap &kp RBKT>
+                ;
+        };
+        lk_s_tcurly: leader_selection_curly_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LCTL &kp X>
+                , <&macro_tap &kp LBRC>
+                , <&macro_tap &sk LCTL &kp V>
+                , <&macro_tap &kp RBRC>
+                ;
+        };
+
+    };
+};

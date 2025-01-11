@@ -1,0 +1,88 @@
+/ {
+    macros {
+        // Single Alt-tab to swap to the previous window instead of cycling through
+        priv_cemail: priv_cemail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp Y>,
+                <&macro_tap &kp AT &kp C &kp DOT &kp C &kp O &kp M>;
+        };
+        priv_cdom: priv_cdomain {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp C &kp DOT &kp C &kp O &kp M>;
+        };
+        priv_cdom2: priv_cdomain2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp C &kp DOT &kp I &kp O>;
+        };
+        priv_comp: priv_comp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &sk LSFT &kp C>,
+                <&macro_tap &sk RALT &kp T>;
+        };
+        priv_comp2: priv_comp2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &sk LSFT &kp C>,
+                <&macro_tap &sk RALT &kp T>;
+        };
+
+        priv_pemail: priv_personal_email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp Y>,
+                <&macro_tap &kp AT &kp D &kp DOT &kp N &kp E &kp T>;
+        };
+        priv_pdom1: priv_personal_domain1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp D &kp DOT &kp N &kp E &kp T>;
+        };
+        priv_pdom2: priv_personal_domain2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp D &kp DOT &kp O &kp R &kp G>;
+        };
+        priv_addr: priv_personal_street_address {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp N9>,
+                <&macro_tap &kp SPC &kp E>,
+                <&macro_tap &kp DA_ADDR>;
+        };
+        priv_postcode: priv_personal_postcode_address {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp N0>;
+        };
+        priv_town: priv_personal_town_address {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &sk LSFT &kp T>;
+        };
+        priv_addr2: priv_personal_address {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp ENTER>,
+                <&macro_tap &kp N0>,
+                <&macro_tap &kp SPC>,
+                <&macro_tap &sk LSFT &kp T>;
+        };
+
+    };
+};

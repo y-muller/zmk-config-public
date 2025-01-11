@@ -1,0 +1,79 @@
+/ {
+    behaviors {
+        // help main/altgr
+        help_main_altgr: help_main_altgr {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&help_main>, <&help_altgr>;
+            mods = <(MOD_RALT)>;
+        };
+    };
+
+    macros {
+        // Help macros
+        help_main: help_main {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp INTERNATIONAL_1>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp LANGUAGE_9>
+                ;
+        };
+        help_altgr: help_altgr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LA(INTERNATIONAL_1)>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp LANGUAGE_9>
+                ;
+        };
+        help_extend: help_extend {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp INTERNATIONAL_2>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp LANGUAGE_9>
+                ;
+        };
+        help_nav: help_nav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp INTERNATIONAL_3>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp LANGUAGE_9>
+                ;
+        };
+        help_symbols: help_symbols {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp INTERNATIONAL_5>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp LANGUAGE_9>
+                ;
+        };
+        help_func: help_func {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp INTERNATIONAL_4>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp LANGUAGE_9>
+                ;
+        };
+        help_media: help_media {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANGUAGE_1>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp LANGUAGE_9>
+                ;
+        };
+
+    };
+};

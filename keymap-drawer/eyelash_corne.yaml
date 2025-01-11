@@ -1,0 +1,441 @@
+layers:
+  COLEMK:
+  - ESC
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - $$mdi:arrow-up-bold$$
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - BSPC
+  - {t: TAB, h: MEDIA}
+  - {t: A, h: SUPER}
+  - {t: R, h: ALT}
+  - {t: S, h: SHIFT}
+  - {t: T, h: CTRL}
+  - G
+  - $$mdi:arrow-left-bold$$
+  - ENTER
+  - $$mdi:arrow-right-bold$$
+  - M
+  - {t: N, h: CTRL}
+  - {t: E, h: SHIFT}
+  - {t: I, h: ALT}
+  - {t: O, h: SUPER}
+  - {t: ENTER, h: MEDIA}
+  - {t: SUPER, h: CTRL}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - MUTE
+  - $$mdi:arrow-down-bold$$
+  - K
+  - H
+  - {t: ',', s: '`'}
+  - {t: ., h: .␣⇧, s: '~'}
+  - {t: /, h: ~/}
+  - {t: '''', h: ALT}
+  - {t: ADAPT, h: NAV}
+  - SHIFT
+  - {t: CAPS, h: EXTEND}
+  - {t: RALT, h: SYMBOLS}
+  - {t: SPC, h: TMUX}
+  - {t: ADAPT, h: FUNC}
+  MEDIA:
+  - ESC
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - MIC MUTE
+  - F5
+  - $$mdi:pan-up$$
+  - LOCK
+  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:menu-up$$', s: '&mmv MOVE_Y(-100)'}
+  - $$mdi:mouse-right-click-outline$$
+  - ''
+  - PG UP
+  - {t: TAB, h: EXTEND, type: held}
+  - ''
+  - BRI DN
+  - BRI UP
+  - ''
+  - ''
+  - $$mdi:pan-left$$
+  - ENTER
+  - $$mdi:pan-right$$
+  - Ctl+ +
+  - {t: '$$mdi:menu-left$$', s: '&mmv MOVE_X(-100)'}
+  - {t: '$$mdi:menu-down$$', s: '&mmv MOVE_Y(100)'}
+  - {t: '$$mdi:menu-right$$', s: '&mmv MOVE_X(100)'}
+  - $$mdi:arrow-up-bold$$
+  - PG DN
+  - ''
+  - PLAY
+  - STOP
+  - PREV
+  - NEXT
+  - ''
+  - SPACE
+  - $$mdi:pan-down$$
+  - Ctl+ -
+  - $$mdi:mouse-scroll-wheel$$
+  - ''
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ALT
+  - HOME
+  - SPC
+  - END
+  SYMBOLS:
+  - X
+  - {t: '>', h: '>=', s: ''''}
+  - '7'
+  - '8'
+  - '9'
+  - {t: '@', s: ^}
+  - $$mdi:arrow-up-bold$$
+  - {t: '&', h: '&&'}
+  - {t: (, h: ()}
+  - {t: ), h: )↵}
+  - {t: '{', h: '{}', s: '}'}
+  - '}'
+  - BSPC
+  - TAB
+  - {t: ., h: SUPER, s: ','}
+  - {t: '1', h: ALT}
+  - {t: '2', h: SHIFT}
+  - {t: '3', h: CTRL}
+  - {t: '#', h: /* */}
+  - $$mdi:arrow-left-bold$$
+  - ENTER
+  - $$mdi:arrow-right-bold$$
+  - {t: '=', h: ==}
+  - {t: '-', h: CTRL}
+  - {t: +, h: SHIFT}
+  - {t: /, h: ALT, s: \}
+  - {t: '*', h: SUPER, s: ':'}
+  - ENTER
+  - LOCK
+  - {t: <, h: <=, s: '"'}
+  - '4'
+  - '5'
+  - '6'
+  - {t: $, s: '%'}
+  - SPACE
+  - $$mdi:arrow-down-bold$$
+  - {t: '!', h: '!=', s: \}
+  - _
+  - {t: '[', h: '[]'}
+  - ']'
+  - {t: '|', h: '||', s: '?'}
+  - COMP
+  - {t: ADAPT, h: NAV}
+  - {t: '0', h: SHIFT}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - SPC
+  - {t: ▽, type: trans}
+  EXTEND:
+  - ''
+  - ESC
+  - Ctl+ W
+  - Ctl+ F
+  - ''
+  - INS
+  - $$mdi:arrow-up-bold$$
+  - HOME
+  - PGUP
+  - $$mdi:arrow-up-bold$$
+  - PGDN
+  - ''
+  - DEL
+  - PREV WIN
+  - {t: SUPER, h: sticky}
+  - {t: ALT, h: sticky}
+  - {t: SHIFT, h: sticky}
+  - {t: CTRL, h: sticky}
+  - {h: SELECT}
+  - $$mdi:arrow-left-bold$$
+  - ENTER
+  - $$mdi:arrow-right-bold$$
+  - END
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - BSPC
+  - ENTER
+  - LOCK
+  - UNDO
+  - CUT
+  - COPY
+  - PASTE
+  - REDO
+  - Sft+ SPACE
+  - $$mdi:arrow-down-bold$$
+  - Sft+ TAB
+  - TAB
+  - ''
+  - BACK WORD
+  - DEL
+  - BACK WORD
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - SPC
+  - {t: ▽, type: trans}
+  NAV:
+  - ALT ESC
+  - Trsm
+  - Ffox
+  - Files
+  - Code Lite
+  - Joplin
+  - $$mdi:arrow-up-bold$$
+  - ''
+  - Alt+ 1
+  - Alt+ 2
+  - Alt+ 3
+  - Alt+ 4
+  - ''
+  - ALT TAB
+  - Signal
+  - Skype
+  - Slack
+  - Build Term
+  - New Term
+  - $$mdi:arrow-left-bold$$
+  - ENTER
+  - $$mdi:arrow-right-bold$$
+  - ''
+  - WSP 1
+  - WSP 2
+  - WSP 3
+  - WSP 4
+  - Ctl+ PGUP
+  - ''
+  - Vi Notes
+  - ''
+  - Term COPY
+  - Term PASTE
+  - ''
+  - MUTE
+  - $$mdi:arrow-down-bold$$
+  - ''
+  - LEFT TAB
+  - RIGHT TAB
+  - SEARCH NXT
+  - SEARCH PRV
+  - Ctl+ PGDN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PREV PAGE
+  - SPC
+  - NEXT PAGE
+  FUNC:
+  - {t: RESET, h: 3 taps}
+  - ''
+  - F7
+  - F8
+  - F9
+  - F12
+  - RGB BRI
+  - {t: BT RESET, h: 2 taps}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: RESET, h: 3 taps}
+  - {t: BOOT, h: 2 taps}
+  - ''
+  - F1
+  - F2
+  - F3
+  - F11
+  - ''
+  - ENTER
+  - ''
+  - RGB TOG
+  - RGB BRD
+  - RGB BRI
+  - ''
+  - ''
+  - {t: BOOT, h: 2 taps}
+  - ''
+  - ''
+  - F4
+  - F5
+  - F6
+  - F10
+  - LSFT
+  - RGB BRD
+  - SLEEP
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  TMUX:
+  - ''
+  - ''
+  - '&tm_lsw'
+  - ''
+  - ''
+  - ''
+  - '&tm_cup'
+  - '&tm_j'
+  - '&tm_l'
+  - '&tm_u'
+  - '&tm_y'
+  - ''
+  - ''
+  - ''
+  - SUPER
+  - '&tm_rcnf'
+  - ALT
+  - LCTL
+  - ''
+  - '&tm_clft'
+  - ''
+  - '&tm_crght'
+  - '&tm_m'
+  - '&tm_n'
+  - '&tm_e'
+  - '&tm_i'
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - '&tm_z'
+  - ''
+  - '&tm_cw'
+  - ''
+  - ''
+  - ''
+  - '&tm_cdn'
+  - ''
+  - '&tm_cm'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  SLCT1: ['', '', '', '', '', '', '', '', '', '&sel1_u 8', '', '', '', '', '', '', '', '', '', '', '', '', '', '&sel1_l 8', '&sel1_d 8', '&sel1_r 8', '', '', '',
+    '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+  SLCT2: [ESC, '', '', '', '', '', '', '', '', '&sel2_u', '', '', '', TAB, '', '', '', '', '', '', '', '', '', '&sel2_l', '&sel2_d', '&sel2_r', '', '', '', '', '',
+    '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+combos:
+- p: [37, 38]
+  k: LEADER
+  l: [COLEMK]
+- p: [22, 36]
+  k: DEV
+  l: [COLEMK]
+- p: [14, 29]
+  k: qu
+  l: [COLEMK]
+- p: [23, 37]
+  k: _
+  l: [COLEMK]
+- p: [8, 23]
+  k: '-'
+  l: [COLEMK]
+- p: [9, 24]
+  k: ''''
+  l: [COLEMK]
+- p: [10, 25]
+  k: '"'
+  l: [COLEMK]
+- p: [17, 32]
+  k: ':'
+  l: [COLEMK]
+- p: [16, 31]
+  k: ;
+  l: [COLEMK]
+- p: [26, 40]
+  k: '!'
+  l: [COLEMK]
+- p: [25, 39]
+  k: \
+  l: [COLEMK, SYMBOLS]
+- p: [1, 2]
+  k: <>
+  l: [SYMBOLS]
+- p: [36, 37]
+  k: BACK WORD
+  l: [COLEMK]
+- p: [4, 17]
+  k: ESC
+  l: [COLEMK]
+- p: [2, 3]
+  k: SAVE
+  l: [COLEMK]
+- p: [30, 31]
+  k: COPY
+  l: [COLEMK]
+- p: [31, 32]
+  k: PASTE
+  l: [COLEMK]
+- p: [30, 32]
+  k: CUT
+  l: [COLEMK]
+  a: bottom
+  o: -0.25
+- p: [29, 30]
+  k: UNDO
+  l: [COLEMK]
+- p: [32, 33]
+  k: REDO
+  l: [COLEMK]
+- p: [8, 9]
+  k: 'ESC :'
+  l: [COLEMK]
+- p: [0, 1]
+  k: {t: MEDIA, h: toggle}
+  l: [COLEMK, MEDIA]
+- p: [32, 37]
+  k: HELP
+  l: [COLEMK]
+  a: bottom
+- p: [32, 37]
+  k: HELP
+  l: [COLEMK]
+  a: bottom
+- p: [32, 37]
+  k: HELP
+  l: [COLEMK]
+  a: bottom
+- p: [32, 37]
+  k: HELP
+  l: [COLEMK]
+  a: bottom
+- p: [32, 37]
+  k: HELP
+  l: [COLEMK]
+  a: bottom
+- p: [32, 37]
+  k: HELP
+  l: [COLEMK]
+  a: bottom

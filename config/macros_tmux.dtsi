@@ -1,0 +1,146 @@
+/ {
+    macros {
+        // TMUX macros
+        tm_n: tmux_n {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp N>
+                ;
+        };
+        tm_i: tmux_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp I>
+                ;
+        };
+        tm_u: tmux_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp U>
+                ;
+        };
+        tm_e: tmux_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp E>
+                ;
+        };
+        tm_l: tmux_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp L>
+                ;
+        };
+        tm_y: tmux_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp Y>
+                ;
+        };
+        tm_j: tmux_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp J>
+                ;
+        };
+        tm_m: tmux_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp M>
+                ;
+        };
+        tm_z: tmux_z {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp Z>
+                ;
+        };
+        tm_cm: tmux_copy_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp LBKT>
+                ;
+        };
+        tm_cw: tmux_create_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp C>
+                ;
+        };
+        tm_lsw: tmux_list_windows {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp W>
+                ;
+        };
+        tm_rcnf: tmux_reload_config {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp R>
+                ;
+        };
+        tm_clft: tmux_ctrl_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LCTL>
+                ;
+        };
+        tm_crght: tmux_ctrl_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LCTL>
+                ;
+        };
+        tm_cup: tmux_ctrl_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LCTL>
+                ;
+        };
+        tm_cdn: tmux_ctrl_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp LCTL>
+                ;
+        };
+
+    };
+};
