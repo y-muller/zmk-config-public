@@ -1,0 +1,385 @@
+draw_config:
+  key_w: 60.0
+  key_h: 56.0
+  split_gap: 30.0
+  combo_w: 28.0
+  combo_h: 26.0
+  key_rx: 6.0
+  key_ry: 6.0
+  dark_mode: false
+  n_columns: 1
+  separate_combo_diagrams: false
+  combo_diagrams_scale: 2
+  inner_pad_w: 2.0
+  inner_pad_h: 2.0
+  outer_pad_w: 30.0
+  outer_pad_h: 56.0
+  line_spacing: 1.2
+  arc_radius: 6.0
+  append_colon_to_layer_header: true
+  small_pad: 2.0
+  legend_rel_x: 0.0
+  legend_rel_y: 0.0
+  draw_key_sides: false
+  key_side_pars:
+    rel_x: 0
+    rel_y: 4
+    rel_w: 12
+    rel_h: 12
+    rx: 4
+    ry: 4
+  svg_extra_style: ''
+  footer_text: ''
+  shrink_wide_legends: 7
+  style_layer_activators: true
+  glyph_tap_size: 14
+  glyph_hold_size: 12
+  glyph_shifted_size: 10
+  glyphs: {}
+parse_config:
+  preprocess: true
+  skip_binding_parsing: false
+  raw_binding_map: {}
+  sticky_label: sticky
+  toggle_label: toggle
+  tap_toggle_label: tap-toggle
+  trans_legend:
+    t: ▽
+    type: trans
+  layer_legend_map: {}
+  mark_alternate_layer_activators: false
+  modifier_fn_map:
+    left_ctrl: Ctl
+    right_ctrl: Ctl
+    left_shift: Sft
+    right_shift: Sft
+    left_alt: Alt
+    right_alt: AGr
+    left_gui: Gui
+    right_gui: Gui
+    keycode_combiner: '{mods}+ {key}'
+    mod_combiner: '{mod_1}+{mod_2}'
+    special_combinations:
+      left_ctrl+left_alt+left_gui+left_shift: Hyper
+      left_ctrl+left_alt+left_shift: Meh
+  zmk_remove_keycode_prefix: []
+  zmk_keycode_map:
+    EXCLAMATION: '!'
+    EXCL: '!'
+    AT_SIGN: '@'
+    AT: '@'
+    HASH: '#'
+    POUND: '#'
+    DOLLAR: $
+    DLLR: $
+    PERCENT: '%'
+    PRCNT: '%'
+    CARET: ^
+    AMPERSAND: '&'
+    AMPS: '&'
+    ASTERISK: '*'
+    ASTRK: '*'
+    STAR: '*'
+    LEFT_PARENTHESIS: (
+    LPAR: (
+    RIGHT_PARENTHESIS: )
+    RPAR: )
+    EQUAL: '='
+    PLUS: +
+    MINUS: '-'
+    UNDERSCORE: _
+    UNDER: _
+    SLASH: /
+    FSLH: /
+    QUESTION: '?'
+    QMARK: '?'
+    BACKSLASH: \
+    BSLH: \
+    PIPE: '|'
+    NON_US_BACKSLASH: \
+    PIPE2: '|'
+    NON_US_BSLH: '|'
+    SEMICOLON: ;
+    SEMI: ;
+    COLON: ':'
+    SINGLE_QUOTE: ''''
+    SQT: ''''
+    APOSTROPHE: ''''
+    APOS: ''''
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    COMMA: ','
+    LESS_THAN: <
+    LT: <
+    PERIOD: .
+    DOT: .
+    GREATER_THAN: '>'
+    GT: '>'
+    LEFT_BRACKET: '['
+    LBKT: '['
+    LEFT_BRACE: '{'
+    LBRC: '{'
+    RIGHT_BRACKET: ']'
+    RBKT: ']'
+    RIGHT_BRACE: '}'
+    RBRC: '}'
+    GRAVE: '`'
+    TILDE: '~'
+    NON_US_HASH: '#'
+    NUHS: '#'
+    TILDE2: '~'
+
+    F17: 'GNOME'
+    F20: 'MIC MUTE'
+    LALT: 'ALT'
+    LSHFT: 'SHIFT'
+    LSHIFT: 'SHIFT'
+    LCTRL: 'CTRL'
+    LGUI: 'SUPER'
+    RGUI: 'COMP'
+
+    # Arrows
+    UP: $$mdi:arrow-up-bold$$
+    UP_ARROW: $$mdi:arrow-up-bold$$
+    DOWN: $$mdi:arrow-down-bold$$
+    DOWN_ARROW: $$mdi:arrow-down-bold$$
+    LEFT_ARROW: $$mdi:arrow-left-bold$$
+    LEFT: $$mdi:arrow-left-bold$$
+    RIGHT: $$mdi:arrow-right-bold$$
+    RIGHT_ARROW: $$mdi:arrow-right-bold$$
+
+  raw_binding_map:
+    # Mouse
+    "&msc SCRL_UP":
+      tap: $$mdi:pan-up$$
+      hold: ''
+      shifted: ''
+    "&msc SCRL_DOWN":
+      tap: $$mdi:pan-down$$
+      hold: ''
+      shifted: ''
+    "&msc SCRL_LEFT":
+      tap: $$mdi:pan-left$$
+      hold: ''
+      shifted: ''
+    "&msc SCRL_RIGHT":
+      tap: $$mdi:pan-right$$
+      hold: ''
+      shifted: ''
+    "&mmv MOVE_LEFT":
+      tap: $$mdi:menu-left$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mmv MOVE_RIGHT":
+      tap: $$mdi:menu-right$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mmv MOVE_UP":
+      tap: $$mdi:menu-up$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mmv MOVE_DOWN":
+      tap: $$mdi:menu-down$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mkp LCLK":
+      tap: $$mdi:mouse-left-click-outline$$
+    "&mkp RCLK":
+      tap: $$mdi:mouse-right-click-outline$$
+    "&mkp MCLK":
+      tap: $$mdi:mouse-scroll-wheel$$
+
+    "&nav_adl MEDIA 0":
+      tap: '▽'
+      type: 'trans'
+
+    "&td_caps":
+      tap:  'CAPS'
+    "&nav_alttab":
+      tap:  'NAV'
+    "&home_dir":
+      tap:  '~/'
+    "&new_sentence":
+      tap:  '.␣⇧'
+    "&ad_left":
+      tap:  'ADAPT'
+    "&ad_right":
+      tap:  'ADAPT'
+    "&c_comment":
+      tap:  '/* */'
+    "&less_equal":
+      tap:  '<='
+    "&greater_equal":
+      tap:  '>='
+    "&lbkt_rbkt":
+      tap:  '[]'
+    "&pipe_pipe":
+      tap:  '||'
+    "&not_equal":
+      tap:  '!='
+    "&equal_equal":
+      tap:  '=='
+    "&amps_amps":
+      tap:  '&&'
+    "&equal_spaces":
+      tap:  ''
+    "&amps_spaces":
+      tap:  ''
+    "&td_brc":
+      tap:  '{'
+    "&lpar_rpar":
+      tap:  '()'
+    "&rpar_newline":
+      tap:  ')↵'
+    "&brc_lri":
+      tap:  '{}'
+    "&llock":
+      tap:  'LOCK'
+    "&select":
+      hold:  'SELECT'
+    "&prv_wnd":
+      tap:  'PREV WIN'
+    "&alttab":
+      tap:  'ALT TAB'
+    "&altesc":
+      tap:  'ALT ESC'
+    "&srch_nxt":
+      tap:  'SEARCH NXT'
+    "&srch_prv":
+      tap:  'SEARCH PRV'
+    "&td_boot":
+      tap:  'BOOT'
+      hold: '2 taps'
+    "&sys_reset":
+      tap:  'RESET'
+      hold: '3 taps'
+    "&td_btclr":
+      tap:  'BT RESET'
+      hold: '2 taps'
+
+    # Apps
+    "&kp LC(LG(O))":
+      tap:  'Trsm'
+    "&kp LC(LG(W))":
+      tap:  'Ffox'
+    "&kp LC(LG(F))":
+      tap:  'Files'
+    "&kp LC(LG(L))":
+      tap:  'Code Lite'
+    "&kp LC(LG(J))":
+      tap:  'Joplin'
+    "&kp LC(LG(A))":
+      tap:  'Signal'
+    "&kp LC(LG(Y))":
+      tap:  'Skype'
+    "&kp LC(LG(S))":
+      tap:  'Slack'
+    "&kp LC(LG(B))":
+      tap:  'Build Term'
+    "&kp LC(LG(X))":
+      tap:  'Vi Notes'
+    "&kp LC(LG(T))":
+      tap:  'New Term'
+
+    "&kp LC(Z)":
+      tap:  'UNDO'
+    "&kp LC(C)":
+      tap:  'COPY'
+    "&kp LC(X)":
+      tap:  'CUT'
+    "&kp LC(V)":
+      tap:  'PASTE'
+    "&kp LC(Y)":
+      tap:  'REDO'
+    "&kp LC(LS(C))":
+      tap:  'Term COPY'
+    "&kp LC(LS(V))":
+      tap:  'Term PASTE'
+    "&kp LC(BSPC)":
+      tap:  'BACK WORD'
+    "&kp LG(F1)":
+      tap:  'WSP 1'
+    "&kp LG(F2)":
+      tap:  'WSP 2'
+    "&kp LG(F3)":
+      tap:  'WSP 3'
+    "&kp LG(F4)":
+      tap:  'WSP 4'
+    "&kp LC(LA(PG_UP))":
+      tap:  'LEFT TAB'
+    "&kp LC(LA(PG_DN))":
+      tap:  'RIGHT TAB'
+    "&kp LA(LEFT)":
+      tap:  'PREV PAGE'
+    "&kp LA(RIGHT)":
+      tap:  'NEXT PAGE'
+
+  zmk_combos:
+    combo_less_greater:
+      key: '<>'
+    combo_undo:
+      key: 'UNDO'
+      layers: [ 'COLEMK' ]
+    combo_redo:
+      key: 'REDO'
+      layers: [ 'COLEMK' ]
+    combo_copy:
+      key: 'COPY'
+      layers: [ 'COLEMK' ]
+    combo_paste:
+      key: 'PASTE'
+      layers: [ 'COLEMK' ]
+    combo_cut:
+      align: bottom
+      offset: -0.25
+      key: 'CUT'
+      layers: [ 'COLEMK' ]
+    combo_save:
+      key: 'SAVE'
+    combo_colon:
+      key: ':'
+    combo_semi:
+      key: ';'
+    combo_qu:
+      key: 'qu'
+    combo_help_main_altgr:
+      align: bottom
+      key: 'HELP'
+      layers: [ 'COLEMK' ]
+    combo_help_symbols:
+      align: bottom
+      key: 'HELP'
+      layers: [ 'COLEMK' ]
+    combo_help_nav:
+      align: bottom
+      key: 'HELP'
+      layers: [ 'COLEMK' ]
+    combo_help_extend:
+      align: bottom
+      key: 'HELP'
+      layers: [ 'COLEMK' ]
+    combo_help_func:
+      align: bottom
+      key: 'HELP'
+      layers: [ 'COLEMK' ]
+    combo_help_media:
+      align: bottom
+      key: 'HELP'
+      layers: [ 'COLEMK' ]
+    combo_backword:
+      key: 'BACK WORD'
+    combo_vimcmd:
+      key: 'ESC :'
+    combo_adaptive_dev:
+      key: 'DEV'
+    combo_leader:
+      key: 'LEADER'
+    combo_minus:
+      key: '-'
+    combo_sqt:
+      key: "'"
+    combo_dqt:
+      key: '"'
+
+  zmk_preamble: '#define KEYMAP_DRAWER'
+  zmk_additional_includes: []

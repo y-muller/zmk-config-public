@@ -1,0 +1,35 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    # Additional modules containing boards/shields/custom code can be listed here as well
+    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
+    - name: eyelash
+      url-base: https://github.com/a741725193
+    - name: urob
+      url-base: https://github.com/urob
+    - name: ssbb
+      url-base: https://github.com/ssbb
+  projects:
+    - name: zmk
+      #remote: petejohanson
+      #revision: feat/pointers-with-input-processors
+      remote: urob
+      revision: main
+      import: app/west.yml
+    - name: zmk-new_corne
+      remote: eyelash
+      revision: main
+    - name: zmk-leader-key
+      remote: urob
+      revision: main # 'main' or 'legacy' for the original PR version
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: main
+#    - name: zmk-antecedent-morph
+#      remote: ssbb
+#      revision: v1
+self:
+    path: config
