@@ -5,33 +5,33 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &kp Y>,
-                <&macro_tap &kp AT &kp C &kp DOT &kp C &kp O &kp M>;
+                <&macro_tap &kp Y &kp M &kp U &kp L &kp L &kp E &kp R>,
+                <&macro_tap &kp AT &kp S &kp C &kp I &kp P &kp H &kp E &kp R &kp X &kp DOT &kp C &kp O &kp M>;
         };
         priv_cdom: priv_cdomain {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &kp C &kp DOT &kp C &kp O &kp M>;
+                <&macro_tap &kp S &kp C &kp I &kp P &kp H &kp E &kp R &kp X &kp DOT &kp C &kp O &kp M>;
         };
         priv_cdom2: priv_cdomain2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &kp C &kp DOT &kp I &kp O>;
+                <&macro_tap &kp S &kp C &kp R &kp I &kp P &kp T &kp X &kp DOT &kp I &kp O>;
         };
         priv_comp: priv_comp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &sk LSFT &kp C>,
+                <&macro_tap &sk LSFT &kp S &kp C &kp I &kp P &kp H &kp E &kp R &sk LSFT &kp X>,
                 <&macro_tap &sk RALT &kp T>;
         };
         priv_comp2: priv_comp2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &sk LSFT &kp C>,
+                <&macro_tap &sk LSFT &kp S &kp C &kp R &kp Y &kp P &kp T &sk LSFT &kp X>,
                 <&macro_tap &sk RALT &kp T>;
         };
 
@@ -39,49 +39,49 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &kp Y>,
-                <&macro_tap &kp AT &kp D &kp DOT &kp N &kp E &kp T>;
+                <&macro_tap &kp Y &kp A &kp N &kp N>,
+                <&macro_tap &kp AT &kp D &kp A &kp R &kp K &kp R &kp I &kp V &kp E &kp R &kp DOT &kp N &kp E &kp T>;
         };
         priv_pdom1: priv_personal_domain1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &kp D &kp DOT &kp N &kp E &kp T>;
+                <&macro_tap &kp D &kp A &kp R &kp K &kp R &kp I &kp V &kp E &kp R &kp DOT &kp N &kp E &kp T>;
         };
         priv_pdom2: priv_personal_domain2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &kp D &kp DOT &kp O &kp R &kp G>;
+                <&macro_tap &kp M &kp O &kp O &kp N &kp S &kp K &kp I &kp N &kp DOT &kp O &kp R &kp G>;
         };
         priv_addr: priv_personal_street_address {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &kp N9>,
-                <&macro_tap &kp SPC &kp E>,
+                <&macro_tap &kp N8 &kp N0 &kp SPC &sk LSFT &kp R &kp O &kp U &kp T &kp E &kp SPC &kp D &kp E>,
+                <&macro_tap &kp SPC &kp L &kp A &kp SPC &sk LSFT &kp S &kp E &kp R &kp R &kp E>,
                 <&macro_tap &kp DA_ADDR>;
         };
         priv_postcode: priv_personal_postcode_address {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &kp N0>;
+                <&macro_tap &kp N6 &kp N5 &kp N1 &kp N5 &kp N0>;
         };
         priv_town: priv_personal_town_address {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &sk LSFT &kp T>;
+                <&macro_tap &sk LSFT &kp S &kp E &kp I &kp C &kp H>;
         };
         priv_addr2: priv_personal_address {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
                 <&macro_tap &kp ENTER>,
-                <&macro_tap &kp N0>,
+                <&macro_tap &kp N6 &kp N5 &kp N1 &kp N5 &kp N0>,
                 <&macro_tap &kp SPC>,
-                <&macro_tap &sk LSFT &kp T>;
+                <&macro_tap &sk LSFT &kp S &kp E &kp I &kp C &kp H>;
         };
 
     };

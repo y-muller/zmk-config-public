@@ -15,8 +15,15 @@ name it has little to do with the original Corne. The layout is very similar, bu
 a rotary encoder on the left side and a five-way switch on the right. It has two low-power
 screens that are compatible with the nice!view.
 
+## Totem
+
+A 38 key low-profile keyboard with strong column stagger and splay. The missing keys compared to the Corne require 
+some small changes to the overall keymap. The [Totem layout](TOTEM.md) is documented separately.
+
+### Modules
+
 I am using these modules:
-- [keyboard config](https://github.com/a741725193/zmk-new_corne)
+- [keyboard config](https://github.com/a741725193/zmk-new_corne) for the Corne-j
 - [leader-key](https://github.com/urob/zmk-leader-key) by urov
 - [adaptive-key](https://github.com/urob/zmk-adaptive-key) by urob
 
@@ -45,6 +52,9 @@ between the dev adaptive key and the leader key.
 
 Long press macros: holding `/` types `~/` or `../` with Shift, holding `.` starts a new sentence with a dot, a space and a sticky Shift. With Shift, holding `.` 
 types `~/workspace/`. Holding `Shift` `,` (backtick) starts a markdown code block with 3 backticks.
+
+A single tap on `AltGR` gives access to a sticky alternate symbols defined on the OS. All the accented characters to write in French, and
+much more, are present. Slightly outdated documentation is available [here](https://github.com/y-muller/personal_configs/blob/main/xkb/README.md).
 
 ![symbols](keymap-drawer/eyelash_corne_symbols.svg)
 A long press on `(`, `{` or `[` closes the parenthesis or bracket and moves the cursor inside. A long press on `=`, `&`, `|` doubles the symbols,

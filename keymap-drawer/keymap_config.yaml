@@ -131,7 +131,9 @@ parse_config:
 
     F17: 'GNOME'
     F20: 'MIC MUTE'
+    K_APP: 'CTXT MENU'
     LALT: 'ALT'
+    RALT: 'AltGR'
     LSHFT: 'SHIFT'
     LSHIFT: 'SHIFT'
     LCTRL: 'CTRL'
@@ -192,6 +194,9 @@ parse_config:
     "&nav_adl MEDIA 0":
       tap: '▽'
       type: 'trans'
+    "&nav_adl SYMBOLS 0":
+      tap: '▽'
+      type: 'trans'
 
     "&td_caps":
       tap:  'CAPS'
@@ -248,11 +253,11 @@ parse_config:
     "&srch_prv":
       tap:  'SEARCH PRV'
     "&td_boot":
+      shifted:  'RESET'
       tap:  'BOOT'
-      hold: '2 taps'
+      hold: '(2 taps)'
     "&sys_reset":
       tap:  'RESET'
-      hold: '3 taps'
     "&td_btclr":
       tap:  'BT RESET'
       hold: '2 taps'
@@ -276,10 +281,12 @@ parse_config:
       tap:  'Slack'
     "&kp LC(LG(B))":
       tap:  'Build Term'
-    "&kp LC(LG(X))":
-      tap:  'Vi Notes'
+    "&kp LS(LC(LG(T)))":
+      tap:  'Srv Term'
     "&kp LC(LG(T))":
       tap:  'New Term'
+    "&kp LC(LG(X))":
+      tap:  'Vi Notes'
 
     "&kp LC(Z)":
       tap:  'UNDO'
@@ -313,6 +320,19 @@ parse_config:
       tap:  'PREV PAGE'
     "&kp LA(RIGHT)":
       tap:  'NEXT PAGE'
+    "&kp LC(PLUS)":
+      tap:  'ZOOM IN'
+    "&kp LC(MINUS)":
+      tap:  'ZOOM OUT'
+
+    "&bt BT_SEL 0":
+      tap:  'BT ➊'
+    "&bt BT_SEL 1":
+      tap:  'BT ➋'
+    "&bt BT_SEL 2":
+      tap:  'BT ➌'
+    "&bt BT_SEL 3":
+      tap:  'BT ➍'
 
   zmk_combos:
     combo_less_greater:

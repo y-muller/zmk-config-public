@@ -1,0 +1,90 @@
+/* Defines, shortcuts, etc... */
+
+
+#undef ZMK_MOUSE_DEFAULT_MOVE_VAL
+#undef ZMK_MOUSE_DEFAULT_SCRL_VAL
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+
+#define COLEMAK 0
+#define MEDIA   1
+#define SYMBOLS 2
+#define EXTEND  3
+#define NAV     4
+#define FUNC    5
+#define TMUX    6
+#define SELECT1 7
+#define SELECT2 8
+
+
+#define KEYS_LEFT     0  1  2  3  4  5 13 14 15 16 17 18 28 29 30 31 32 33 // left-hand keys
+#define KEYS_RIGHT    7  8  9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 // right-hand keys
+#define KEYS_THUMBS  42 43 44 45 46 47                                     // thumb keys
+#define KEYS_5WAY     6 19 20 21 35                                        // five-way switch
+#define KEY_ENCODER  34                                                    // push on rotary encoder
+
+// mouse movement and scroll
+#define U_MS_SLOW_SPEED 100
+#define U_MS_U &ms_up
+#define U_MS_D &ms_down
+#define U_MS_L &ms_left
+#define U_MS_R &ms_right
+//#define U_MS_U &mmv MOVE_UP
+//#define U_MS_D &mmv MOVE_DOWN
+//#define U_MS_L &mmv MOVE_LEFT
+//#define U_MS_R &mmv MOVE_RIGHT
+#define U_WH_U &msc SCRL_UP
+#define U_WH_D &msc SCRL_DOWN
+#define U_WH_L &msc SCRL_LEFT
+#define U_WH_R &msc SCRL_RIGHT
+
+#define SELECT &select SELECT1 COLEMAK
+#define SEL1_U &sel1_u SELECT2
+#define SEL1_D &sel1_d SELECT2
+#define SEL1_L &sel1_l SELECT2
+#define SEL1_R &sel1_r SELECT2
+
+#define EXT_CAPS &mo_caps EXTEND 0
+#define SYMB_ALTGR &mo_sk SYMBOLS RALT
+#define SLASH_DIRS &ht_dirs 0 SLASH
+#define DOT_MACROS &ht_sentence 0 0
+#define MEDIA_TAB  &lt MEDIA TAB
+#define MEDIA_ENT &lt MEDIA ENTER
+#define EXT_TAB &lt EXTEND TAB
+#define NAV_ADL     &nav_adl COLEMAK 0      // layer parameter is the layer to go back to after release
+#define NAV_ADL_MD  &nav_adl MEDIA 0        // layer parameter is the layer to go back to after release
+#define NAV_ADL_SYM &nav_adl SYMBOLS 0      // layer parameter is the layer to go back to after release
+#define FUNC_ADR &mo_adr FUNC 0
+#define TMUX_SPC &lt TMUX SPC
+#define LCTRL_LGUI &mt LCTRL LGUI
+#define TAB_L &kp LC(LA(PG_UP))
+#define TAB_R &kp LC(LA(PG_DN))
+
+/* Application shortcuts */
+#define APP_FFOX &kp LC(LG(W))
+#define APP_FILE &kp LC(LG(F))
+#define APP_CODE &kp LC(LG(L))
+#define APP_JOPL &kp LC(LG(J))
+#define APP_SIGN &kp LC(LG(A))
+#define APP_SKYP &kp LC(LG(Y))
+#define APP_SLAC &kp LC(LG(S))
+#define APP_BTRM &kp LC(LG(B))
+#define APP_NTRM &kp LC(LG(T))
+#define APP_STRM &kp LS(LC(LG(T)))
+#define APP_SCRP &kp LC(LG(X))
+#define APP_TRSM &kp LC(LG(O))
+#define GNOME &kp F17
+
+/* Dead Antecedents - from the Misc. list */
+#define DA_ENDM OUT
+#define DA_DQT2LTGT EXSEL
+#define DA_LTGT2DQT OPER
+#define DA_ADDR SEPARATOR
+
+
+/* Awkward layer lock */
+/* Lock: press lock key, release mo layer, release lock */
+/* Unlock: tap lock key */
+#define LOCK_SYM &llock SYMBOLS
+#define LOCK_EXT &llock EXTEND
+#define LOCK_MED &llock MEDIA
