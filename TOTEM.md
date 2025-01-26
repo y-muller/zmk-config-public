@@ -1,6 +1,6 @@
 ## The Totem layout
 
-Only the differences to the main layout are documented here.
+Only the differences to the [main layout](README.md) are documented here.
 
 ![colemak](keymap-drawer/totem_colemak.svg)
 

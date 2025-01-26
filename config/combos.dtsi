@@ -115,12 +115,6 @@
             bindings = <&kp LC(X)>;
             //layers = <COLEMAK>;
         };
-        combo_undo {
-            timeout-ms = <50>;
-            key-positions = <LB4 LB3>;
-            bindings = <&kp LC(Z)>;
-            //layers = <COLEMAK>;
-        };
         combo_redo {
             timeout-ms = <50>;
             key-positions = <LB1 LB0>;
