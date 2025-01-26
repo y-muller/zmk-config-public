@@ -41,11 +41,12 @@
             bindings = <&tog MEDIA>;
             layers = <COLEMAK MEDIA>;
         };
-//            combo_esc {
-//                timeout-ms = <50>;
-//                key-positions = <0 1>;
-//                bindings = <&kp ESC>;
-//            };
+        combo_undo {
+            timeout-ms = <50>;
+            key-positions = <LM4 LB3>;
+            bindings = <&kp LC(Z)>;
+            //layers = <COLEMAK>;
+        };
     };
 };
 
