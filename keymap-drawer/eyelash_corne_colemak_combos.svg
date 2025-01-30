@@ -387,18 +387,20 @@ path.combo {
 <text x="196" y="166" class="combo tap">CUT</text>
 </g>
 <g class="combo combopos-18">
-<rect rx="6" ry="6" x="98" y="141" width="28" height="26" class="combo"/>
-<text x="112" y="154" class="combo tap">UNDO</text>
-</g>
-<g class="combo combopos-19">
 <rect rx="6" ry="6" x="266" y="137" width="28" height="26" class="combo"/>
 <text x="280" y="150" class="combo tap">REDO</text>
 </g>
-<g class="combo combopos-20">
+<g class="combo combopos-19">
 <rect rx="6" ry="6" x="294" y="56" width="28" height="26" class="combo"/>
 <text x="308" y="69" class="combo tap">
 <tspan x="308" dy="-0.6em">ESC</tspan><tspan x="308" dy="1.2em">:</tspan>
 </text>
+</g>
+<g class="combo combopos-20">
+<path d="M456,176 h-198 a6.0,6.0 0 0 1 -6.0,-6.0 v-4" class="combo"/>
+<path d="M456,176 h198 a6.0,6.0 0 0 0 6.0,-6.0 v-4" class="combo"/>
+<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
+<text x="456" y="176" class="combo tap">HELP</text>
 </g>
 <g class="combo combopos-21">
 <path d="M456,176 h-198 a6.0,6.0 0 0 1 -6.0,-6.0 v-4" class="combo"/>
@@ -431,15 +433,13 @@ path.combo {
 <text x="456" y="176" class="combo tap">HELP</text>
 </g>
 <g class="combo combopos-26">
-<path d="M456,176 h-198 a6.0,6.0 0 0 1 -6.0,-6.0 v-4" class="combo"/>
-<path d="M456,176 h198 a6.0,6.0 0 0 0 6.0,-6.0 v-4" class="combo"/>
-<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
-<text x="456" y="176" class="combo tap">HELP</text>
-</g>
-<g class="combo combopos-27">
 <rect rx="6" ry="6" x="42" y="36" width="28" height="26" class="combo"/>
 <text x="56" y="49" class="combo tap">MEDIA</text>
 <text x="56" y="60" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-27">
+<rect rx="6" ry="6" x="98" y="141" width="28" height="26" class="combo"/>
+<text x="112" y="154" class="combo tap">UNDO</text>
 </g>
 </g>
 </g>

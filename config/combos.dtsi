@@ -127,6 +127,12 @@
             bindings = <&vimcmd>;
             layers = <COLEMAK>;
         };
+        combo_soft_off {
+            timeout-ms = <50>;
+            key-positions = <LT4 LT3 LM2>;
+            bindings = <&soft_off>;
+            layers = <FUNC>;
+        };
         // Help combos
         combo_help_main_altgr {
             timeout-ms = <50>;

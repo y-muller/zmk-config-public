@@ -25,3 +25,5 @@ To accommodate the cursor keys in the bottom right, the `PGUP` and `PGDN` keys a
 
 ### Combos
 ![colemak combos](keymap-drawer/totem_colemak_combos.svg)
+
+The UNDO combo is moved to `A` `X` as those keys are easier to press at the same time.

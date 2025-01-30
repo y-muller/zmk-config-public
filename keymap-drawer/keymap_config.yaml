@@ -400,6 +400,8 @@ parse_config:
       key: "'"
     combo_dqt:
       key: '"'
+    combo_soft_off:
+      key: 'KB OFF'
 
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []

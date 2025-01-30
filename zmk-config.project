@@ -7,6 +7,7 @@
     <File Name="README.md"/>
   </VirtualDirectory>
   <VirtualDirectory Name="config">
+    <File Name="config/eyelash_corne.conf"/>
     <VirtualDirectory Name="key-labels">
       <File Name="config/key-labels/eyelash_corne.h"/>
       <File Name="config/key-labels/totem.h"/>

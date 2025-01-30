@@ -308,6 +308,14 @@ path.combo {
 <g transform="translate(610, 224)" class="key held keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
+<g class="combo combopos-0">
+<path d="M140,84 l-39,15" class="combo"/>
+<path d="M140,84 l37,0" class="combo"/>
+<rect rx="6" ry="6" x="126" y="71" width="28" height="26" class="combo"/>
+<text x="140" y="84" class="combo tap">
+<tspan x="140" dy="-0.6em">KB</tspan><tspan x="140" dy="1.2em">OFF</tspan>
+</text>
+</g>
 </g>
 </g>
 </svg>
