@@ -28,7 +28,7 @@ I am using these modules:
 - [adaptive-key](https://github.com/urob/zmk-adaptive-key) by urob
 
 ##### What is missing or broken so far
-- the SELECT mode is not as polished as in QMK. Releasing the SELECT key returns to the base layer even if the EXTEND layer key is still pressed
+- the SELECT mode is not as polished as in QMK.
 - the `tmux` mode (Ctrl-A prefix) is replaced by a layer and is not as flexible or complete
 - layer locking is rather awkward (symbols, extend, media)
 - external display switching is missing 
@@ -79,6 +79,8 @@ combo `ESC` `Q`.
 Holding Alt slows down the mouse movements.
 
 ![func](keymap-drawer/eyelash_corne_func.svg)
+
+To connect to a new Bluetooth device, switch to the required BT number and double tap the `BT RESET` key to go into pairing mode.
 
 I have not mapped all the RGB keys yet. I don't use the feature to it doesn't matter.
 

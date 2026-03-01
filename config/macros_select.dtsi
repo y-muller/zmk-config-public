@@ -2,54 +2,49 @@
     macros {
         // Select macros
         select: select_mode {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1>,
-                <&macro_tap &to MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_param_2to1>,
-                <&macro_tap &to MACRO_PLACEHOLDER>
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &tog_on SELECT1>
+                , <&macro_pause_for_release>
+                , <&macro_tap &tog_off SELECT2>
+                , <&macro_tap &tog_off SELECT1>
                 ;
         };
         sel1_r: select1_right {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTL>, <&macro_tap &kp RIGHT>, <&macro_tap &kp LEFT>
                 , <&macro_press &kp LSFT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LSFT>, <&macro_release &kp LCTL>
-                , <&macro_param_1to1>
-                , <&macro_tap &to MACRO_PLACEHOLDER>
+                , <&macro_tap &tog_on SELECT2>
                 ;
         };
         sel1_l: select1_left {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTL>, <&macro_tap &kp LEFT>, <&macro_tap &kp RIGHT>
                 , <&macro_press &kp LSFT>, <&macro_tap &kp LEFT>, <&macro_release &kp LSFT>, <&macro_release &kp LCTL>
-                , <&macro_param_1to1>
-                , <&macro_tap &to MACRO_PLACEHOLDER>
+                , <&macro_tap &tog_on SELECT2>
                 ;
         };
         sel1_u: select1_up {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp END>, <&macro_tap &kp RIGHT>
                 , <&macro_press &kp LSFT>, <&macro_tap &kp UP>, <&macro_release &kp LSFT>
-                , <&macro_param_1to1>
-                , <&macro_tap &to MACRO_PLACEHOLDER>
+                , <&macro_tap &tog_on SELECT2>
                 ;
         };
         sel1_d: select1_down {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp HOME>, <&macro_tap &kp HOME>
                 , <&macro_press &kp LSFT>, <&macro_tap &kp DOWN>, <&macro_release &kp LSFT>
-                , <&macro_param_1to1>
-                , <&macro_tap &to MACRO_PLACEHOLDER>
+                , <&macro_tap &tog_on SELECT2>
                 ;
         };
         sel2_r: select2_right {

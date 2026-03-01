@@ -114,8 +114,8 @@ text.footer {
     paint-order: stroke;
 }
 
-/* styling for combo tap, and key hold/shifted label text */
-text.combo, text.hold, text.shifted {
+/* styling for combo tap, and key non-tap label text */
+text.combo, text.hold, text.shifted, text.left, text.right {
     font-size: 11px;
 }
 
@@ -129,12 +129,20 @@ text.shifted {
     dominant-baseline: hanging;
 }
 
+text.left {
+    text-anchor: start;
+}
+
+text.right {
+    text-anchor: end;
+}
+
 text.layer-activator {
     text-decoration: underline;
 }
 
 /* styling for hold/shifted label text in combo box */
-text.combo.hold, text.combo.shifted {
+text.combo.hold, text.combo.shifted, text.combo.left, text.combo.right {
     font-size: 8px;
 }
 
@@ -211,7 +219,6 @@ path.combo {
 <g transform="translate(717, 28)" class="key keypos-9">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:menu-up" xlink:href="#mdi:menu-up" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:menu-up"/>
-<text x="0" y="-24" class="key shifted"><tspan style="font-size: 64%">&amp;mmv MOVE_…</tspan></text>
 </g>
 <g transform="translate(773, 35)" class="key keypos-10">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -273,17 +280,14 @@ path.combo {
 <g transform="translate(661, 91)" class="key keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:menu-left" xlink:href="#mdi:menu-left" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:menu-left"/>
-<text x="0" y="-24" class="key shifted"><tspan style="font-size: 64%">&amp;mmv MOVE_…</tspan></text>
 </g>
 <g transform="translate(717, 84)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:menu-down" xlink:href="#mdi:menu-down" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:menu-down"/>
-<text x="0" y="-24" class="key shifted"><tspan style="font-size: 64%">&amp;mmv MOVE_…</tspan></text>
 </g>
 <g transform="translate(773, 91)" class="key keypos-25">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:menu-right" xlink:href="#mdi:menu-right" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:menu-right"/>
-<text x="0" y="-24" class="key shifted"><tspan style="font-size: 64%">&amp;mmv MOVE_…</tspan></text>
 </g>
 <g transform="translate(829, 105)" class="key keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -350,9 +354,10 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:arrow-right-bold" xlink:href="#mdi:arrow-right-bold" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-right-bold"/>
 </g>
-<g transform="translate(224, 203)" class="key trans keypos-42">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(224, 203)" class="key keypos-42">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">ADAPT</text>
+<text x="0" y="24" class="key hold">NAV</text>
 </g>
 <g transform="translate(285, 209) rotate(12.0)" class="key trans keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -360,7 +365,7 @@ path.combo {
 </g>
 <g transform="translate(344, 228) rotate(24.0)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">ALT</text>
+<text x="0" y="0" class="key tap">AltGR</text>
 </g>
 <g transform="translate(580, 228) rotate(-24.0)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -375,8 +380,8 @@ path.combo {
 <text x="0" y="0" class="key tap">END</text>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="238" y="50" width="28" height="26" class="combo"/>
-<text x="252" y="63" class="combo tap">ESC</text>
+<rect rx="6" ry="6" x="182" y="43" width="28" height="26" class="combo"/>
+<text x="196" y="56" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="42" y="36" width="28" height="26" class="combo"/>

@@ -102,8 +102,8 @@ text.footer {
     paint-order: stroke;
 }
 
-/* styling for combo tap, and key hold/shifted label text */
-text.combo, text.hold, text.shifted {
+/* styling for combo tap, and key non-tap label text */
+text.combo, text.hold, text.shifted, text.left, text.right {
     font-size: 11px;
 }
 
@@ -117,12 +117,20 @@ text.shifted {
     dominant-baseline: hanging;
 }
 
+text.left {
+    text-anchor: start;
+}
+
+text.right {
+    text-anchor: end;
+}
+
 text.layer-activator {
     text-decoration: underline;
 }
 
 /* styling for hold/shifted label text in combo box */
-text.combo.hold, text.combo.shifted {
+text.combo.hold, text.combo.shifted, text.combo.left, text.combo.right {
     font-size: 8px;
 }
 
@@ -311,9 +319,10 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">ENTER</text>
 </g>
-<g transform="translate(230, 224)" class="key trans keypos-32">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(230, 224)" class="key keypos-32">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">ADAPT</text>
+<text x="0" y="24" class="key hold">NAV</text>
 </g>
 <g transform="translate(297, 232)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -336,26 +345,34 @@ path.combo {
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo combopos-0">
+<rect rx="6" ry="6" x="238" y="127" width="28" height="26" class="combo"/>
+<text x="252" y="140" class="combo tap">:</text>
+</g>
+<g class="combo combopos-1">
+<rect rx="6" ry="6" x="182" y="99" width="28" height="26" class="combo"/>
+<text x="196" y="112" class="combo tap">;</text>
+</g>
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="686" y="133" width="28" height="26" class="combo"/>
 <text x="700" y="146" class="combo tap">\</text>
 </g>
-<g class="combo combopos-1">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="98" y="71" width="28" height="26" class="combo"/>
 <text x="112" y="84" class="combo tap">&lt;&gt;</text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="602" y="29" width="28" height="26" class="combo"/>
 <text x="616" y="42" class="combo tap">
 <tspan x="616" dy="-0.6em">BACK</tspan><tspan x="616" dy="1.2em">WORD</tspan>
 </text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="658" y="32" width="28" height="26" class="combo"/>
 <text x="672" y="45" class="combo tap">BSPC</text>
 </g>
-<g class="combo combopos-4">
-<rect rx="6" ry="6" x="238" y="71" width="28" height="26" class="combo"/>
-<text x="252" y="84" class="combo tap">ESC</text>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="182" y="43" width="28" height="26" class="combo"/>
+<text x="196" y="56" class="combo tap">ESC</text>
 </g>
 </g>
 </g>

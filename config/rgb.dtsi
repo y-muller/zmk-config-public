@@ -1,0 +1,103 @@
+
+/ {
+    behaviors {
+        rgb_effect: rgb_effect_change {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        rgb_bright: rgb_brightness_change {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        rgb_sat: rgb_saturation_change {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        rgb_hue: rgb_hue_change {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        // RGB layer indication
+        combo_rgb_layer_colemak {
+            timeout-ms = <50>;
+            slow-release;
+            key-positions = <RT1 RT2 RT3>;
+            bindings = <&rgb_layer_colemak>;
+            layers = <COLEMAK>;
+        };
+        combo_rgb_layer_media {
+            timeout-ms = <50>;
+            slow-release;
+            key-positions = <RT1 RT2 RT3>;
+            bindings = <&rgb_layer_media>;
+            layers = <MEDIA>;
+        };
+        combo_rgb_layer_extend {
+            timeout-ms = <50>;
+            slow-release;
+            key-positions = <RT1 RT2 RT3>;
+            bindings = <&rgb_layer_extend>;
+            layers = <EXTEND>;
+        };
+        combo_rgb_layer_symbols {
+            timeout-ms = <50>;
+            slow-release;
+            key-positions = <RT1 RT2 RT3>;
+            bindings = <&rgb_layer_symbols>;
+            layers = <SYMBOLS>;
+        };
+    };
+};
+
+/ {
+    macros {
+        // Colemak layer indication
+        rgb_layer_colemak: rgb_layer_colemak_indication {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(256,100,50)>
+                     , <&macro_tap &rgb_ug RGB_ON>
+                     , <&macro_pause_for_release>
+                     , <&macro_tap &rgb_ug RGB_OFF>;
+        };
+        // Media layer indication
+        rgb_layer_media: rgb_layer_media_indication {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,50)>
+                     , <&macro_tap &rgb_ug RGB_ON>
+                     , <&macro_pause_for_release>
+                     , <&macro_tap &rgb_ug RGB_OFF>;
+        };
+        rgb_layer_extend: rgb_layer_extend_indication {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(50,100,50)>
+                     , <&macro_tap &rgb_ug RGB_ON>
+                     , <&macro_pause_for_release>
+                     , <&macro_tap &rgb_ug RGB_OFF>;
+        };
+        rgb_layer_symbols: rgb_layer_symbols_indication {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(0,100,50)>
+                     , <&macro_tap &rgb_ug RGB_ON>
+                     , <&macro_pause_for_release>
+                     , <&macro_tap &rgb_ug RGB_OFF>;
+        };
+    };
+};

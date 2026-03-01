@@ -25,66 +25,67 @@
 
 // mouse movement and scroll
 #define U_MS_SLOW_SPEED 100
-#define U_MS_U &ms_up
-#define U_MS_D &ms_down
-#define U_MS_L &ms_left
-#define U_MS_R &ms_right
-//#define U_MS_U &mmv MOVE_UP
-//#define U_MS_D &mmv MOVE_DOWN
-//#define U_MS_L &mmv MOVE_LEFT
-//#define U_MS_R &mmv MOVE_RIGHT
-#define U_WH_U &msc SCRL_UP
-#define U_WH_D &msc SCRL_DOWN
-#define U_WH_L &msc SCRL_LEFT
-#define U_WH_R &msc SCRL_RIGHT
+#define U_MS_U      &ms_up
+#define U_MS_D      &ms_down
+#define U_MS_L      &ms_left
+#define U_MS_R      &ms_right
+//#define U_MS_U    &mmv MOVE_UP
+//#define U_MS_D    &mmv MOVE_DOWN
+//#define U_MS_L    &mmv MOVE_LEFT
+//#define U_MS_R    &mmv MOVE_RIGHT
+#define U_WH_U      &msc SCRL_UP
+#define U_WH_D      &msc SCRL_DOWN
+#define U_WH_L      &msc SCRL_LEFT
+#define U_WH_R      &msc SCRL_RIGHT
 
-#define SELECT &select SELECT1 COLEMAK
-#define SEL1_U &sel1_u SELECT2
-#define SEL1_D &sel1_d SELECT2
-#define SEL1_L &sel1_l SELECT2
-#define SEL1_R &sel1_r SELECT2
+#define SELECT      &select
+#define SEL1_U      &sel1_u
+#define SEL1_D      &sel1_d
+#define SEL1_L      &sel1_l
+#define SEL1_R      &sel1_r
 
-#define EXT_CAPS &mo_caps EXTEND 0
-#define SYMB_ALTGR &mo_sk SYMBOLS RALT
-#define SLASH_DIRS &ht_dirs 0 SLASH
-#define DOT_MACROS &ht_sentence 0 0
-#define MEDIA_TAB  &lt MEDIA TAB
-#define MEDIA_ENT &lt MEDIA ENTER
-#define EXT_TAB &lt EXTEND TAB
-#define NAV_ADL     &nav_adl COLEMAK 0      // layer parameter is the layer to go back to after release
-#define NAV_ADL_MD  &nav_adl MEDIA 0        // layer parameter is the layer to go back to after release
-#define NAV_ADL_SYM &nav_adl SYMBOLS 0      // layer parameter is the layer to go back to after release
-#define FUNC_ADR &mo_adr FUNC 0
-#define TMUX_SPC &lt TMUX SPC
-#define LCTRL_LGUI &mt LCTRL LGUI
-#define TAB_L &kp LC(LA(PG_UP))
-#define TAB_R &kp LC(LA(PG_DN))
+#define V_GREEK     &hrl RC(RALT) V
+#define K_GREEK     &hrr RC(RALT) K
+
+#define EXT_CAPS    &mo_caps EXTEND 0
+#define SYMB_ALTGR  &symb_skaltgr 0 0
+#define SLASH_DIRS  &ht_dirs 0 SLASH
+#define DOT_MACROS  &ht_sentence 0 0
+#define MEDIA_TAB   &lt MEDIA TAB
+#define MEDIA_ENT   &lt MEDIA ENTER
+#define EXT_TAB     &lt EXTEND TAB
+#define NAV_ADL     &nav_adl NAV 0
+#define FUNC_ADR    &mo_adr FUNC 0
+#define TMUX_SPC    &lt TMUX SPC
+#define LCTRL_LGUI  &mt LCTRL LGUI
+#define TAB_L       &kp LC(LA(PG_UP))
+#define TAB_R       &kp LC(LA(PG_DN))
 
 /* Application shortcuts */
-#define APP_FFOX &kp LC(LG(W))
-#define APP_FILE &kp LC(LG(F))
-#define APP_CODE &kp LC(LG(L))
-#define APP_JOPL &kp LC(LG(J))
-#define APP_SIGN &kp LC(LG(A))
-#define APP_SKYP &kp LC(LG(Y))
-#define APP_SLAC &kp LC(LG(S))
-#define APP_BTRM &kp LC(LG(B))
-#define APP_NTRM &kp LC(LG(T))
-#define APP_STRM &kp LS(LC(LG(T)))
-#define APP_SCRP &kp LC(LG(X))
-#define APP_TRSM &kp LC(LG(O))
-#define GNOME &kp F17
+#define APP_FFOX    &kp LC(LG(W))
+#define APP_FILE    &kp LC(LG(F))
+#define APP_CODE    &kp LC(LG(L))
+#define APP_JOPL    &kp LC(LG(J))
+#define APP_SIGN    &kp LC(LG(A))
+#define APP_SKYP    &kp LC(LG(Y))
+#define APP_SLAC    &kp LC(LG(S))
+#define APP_BTRM    &kp LC(LG(B))
+#define APP_NTRM    &kp LC(LG(T))
+#define APP_STRM    &kp LS(LC(LG(T)))
+#define APP_SCRP    &kp LC(LG(X))
+#define APP_TRSM    &kp LC(LG(O))
+#define GNOME       &kp F17
 
 /* Dead Antecedents - from the Misc. list */
-#define DA_ENDM OUT
+#define DA_ENDM     OUT
 #define DA_DQT2LTGT EXSEL
 #define DA_LTGT2DQT OPER
-#define DA_ADDR SEPARATOR
+#define DA_ADDR     SEPARATOR
 
 
 /* Awkward layer lock */
 /* Lock: press lock key, release mo layer, release lock */
 /* Unlock: tap lock key */
-#define LOCK_SYM &llock SYMBOLS
-#define LOCK_EXT &llock EXTEND
-#define LOCK_MED &llock MEDIA
+#define LOCK_SYM    &llock SYMBOLS
+#define LOCK_EXT    &llock EXTEND
+#define LOCK_MED    &llock MEDIA

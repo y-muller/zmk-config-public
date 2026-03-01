@@ -73,7 +73,7 @@ display-name= "COLEMK"                              ;
 
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp BSPC
                 &hrl LGUI A &hrl LALT R &hrl LSHFT S &hrl LCTRL T &kp G         &kp M       &hrr LCTRL N &hrr LSHFT E &hrr LALT I &hrr LGUI O
-    MEDIA_TAB   &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &comm_grv   DOT_MACROS  SLASH_DIRS    MEDIA_ENT
+    MEDIA_TAB   &kp Z       &kp X       &kp C       &hrl RCTRL D  V_GREEK       K_GREEK    &hrr RCTRL H  &comm_grv   DOT_MACROS  SLASH_DIRS    MEDIA_ENT
                                         NAV_ADL     &kp LSHIFT  EXT_CAPS        SYMB_ALTGR  TMUX_SPC    FUNC_ADR
                         >;
                 };
@@ -99,7 +99,7 @@ display-name= "MEDIA"                               ;
                 &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP &kp F20   &kp F5          LOCK_MED    &mkp LCLK   U_MS_U      &mkp RCLK    &mkp MCLK
                 &none       &kp C_BRI_DN &kp C_BRI_UP &none     &none           &kp LC(PLUS) U_MS_L     U_MS_D      U_MS_R       &kp UP
     EXT_TAB     &kp C_PLAY  &kp C_STOP   &kp C_PREV   &kp C_NEXT &none          &kp LC(MINUS) &kp PG_UP &kp PG_DN   &kp LEFT     &kp DOWN    &kp RIGHT
-                                         NAV_ADL_MD   &trans    &kp LALT        &kp HOME    &kp SPC     &kp END
+                                            NAV_ADL   &trans    &kp RALT        &kp HOME    &kp SPC     &kp END
                         >;
                 };
 
@@ -125,7 +125,7 @@ display-name= "SYMBOLS"                             ;
                 &ht_gt 0 0  &kp N7      &kp N8      &kp N9      &at_caret       &ht_amps 0 0 &ht_lpar 0 LPAR &ht_rpar 0 RPAR  &ht_lbrc 0 0 &kp RBRC
                 &hrl_dot LGUI 0 &hrl LALT N1 &hrl LSHFT N2 &hrl LCTRL N3 &ht_hash 0 HASH       &ht_equl 0 0 &hrr LCTRL MINUS &hrr LSHFT PLUS &hrr_slsh LALT 0 &hrr_star LGUI 0
     &kp TAB     &ht_lt 0 0  &kp N4      &kp N5      &kp N6      &dlr_prc        &ht_excl 0 0 &kp UNDER  &ht_lbkt 0 LBKT &kp RBKT &ht_pipe 0 0  &kp ENTER
-                                        NAV_ADL_SYM &mt LSHIFT N0 &trans        &trans  &kp SPC  &trans
+                                            NAV_ADL &mt LSHIFT N0 &trans        &trans  &kp SPC  &trans
                         >;
                 };
 
@@ -175,8 +175,8 @@ display-name= "NAV"                                 ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 APP_TRSM    APP_FFOX    APP_FILE    APP_CODE    APP_JOPL        &none       &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)
-                APP_SIGN    APP_SKYP    APP_SLAC    APP_BTRM    APP_STRM        &kp LC(PGUP) &kp LG(F1) &kp LG(F2)  &kp LG(F3)  &kp LG(F4)
-    &alttab     &altesc     APP_SCRP  &kp LC(LS(C)) &kp LC(LS(V)) APP_NTRM      &kp LC(PGDN) TAB_L      TAB_R       &srch_nxt   &srch_prv   &kp K_APP
+                &altesc     APP_SIGN    APP_SLAC    APP_BTRM    APP_STRM        &kp LC(PGUP) &kp LG(F1) &kp LG(F2)  &kp LG(F3)  &kp LG(F4)
+    &alttab     &altgrv     APP_SCRP  &kp LC(LS(C)) &kp LC(LS(V)) APP_NTRM      &kp LC(PGDN) TAB_L      TAB_R       &srch_nxt   &srch_prv   &kp K_APP
                                         &trans      &trans      &trans          &kp LA(LEFT) &kp SPC    &kp LA(RIGHT)
                         >;
                 };

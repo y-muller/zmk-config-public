@@ -14,20 +14,18 @@ manifest:
       url-base: https://github.com/ssbb
   projects:
     - name: zmk
-      #remote: petejohanson
-      #revision: feat/pointers-with-input-processors
-      remote: urob
-      revision: main
+      remote: zmkfirmware
+      revision: v0.3
       import: app/west.yml
     - name: zmk-new_corne
       remote: eyelash
       revision: main
     - name: zmk-leader-key
       remote: urob
-      revision: main # 'main' or 'legacy' for the original PR version
+      revision: v0.3 # set to same as ZMK version above
     - name: zmk-adaptive-key
       remote: urob
-      revision: main
+      revision: v0.3 # set to same as ZMK version above
 #    - name: zmk-antecedent-morph
 #      remote: ssbb
 #      revision: v1

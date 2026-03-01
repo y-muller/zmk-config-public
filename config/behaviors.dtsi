@@ -27,6 +27,20 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
         mo_capsword: mo_capsword {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -43,12 +57,13 @@
             bindings = <&mo>, <&td_caps>;
         };
 
-        mo_sk: mo_sticky {
+        // Sticky key for RALT on tap and symbols or RALT held on hold
+        symb_skaltgr: symb_sticky_altgr {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <280>;
-            bindings = <&mo>, <&sk>;
+            bindings = <&symb_holdaltgr>, <&altgr_cancel>;
         };
 
         nav_adl: mo_adaptive_left {
@@ -108,6 +123,66 @@
             tapping-term-ms = <300>;
             bindings = <&dqts_ins>, <&kp>;
         };
+        // Tap-then-hold of SYMB holds AltGr instead of SYMBOLS layer
+        // as the first tap activates a sticky RALT.
+        symb_holdaltgr: symbols_hold_atgr {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo SYMBOLS>, <&hold_altgr>;
+            mods = <(MOD_RALT)>;
+            keep-mods = <(MOD_RALT)>;
+        };
+        altgr_cancel: altgr_cancellable {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk RALT>, <&kp K_CANCEL>;
+            mods = <(MOD_RALT)>;
+        };
+
+        // Greek handling
+        greek_ht: greek_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            bindings = <&greekhold>, <&greek>;
+        };
+        sqt_alt_gr: sqt_alt_altgr {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sqt_alt LALT SQT>, <&greek_ht 0 0>;
+            mods = <(MOD_RALT)>;
+            keep-mods = <(MOD_RALT)>;
+        };
+        sqt_alt: singlequote_alt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Lvl5 handling
+        lvl5_ht: lvl5_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            bindings = <&lvl5hold>, <&lvl5>;
+        };
+        k_altgr3: k_altgr3_chars {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp K>, <&lvl5_ht 0 0>;
+            mods = <(MOD_RALT)>;
+        };
+        v_altgr3: v_altgr3_chars {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&lvl5_ht 0 0>;
+            mods = <(MOD_RALT)>;
+        };
+
         dqts_ins: double_quote_inside {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -119,7 +194,6 @@
             #binding-cells = <0>;
             bindings = <&dqts_n_ins>, <&dqts_glmts_ins>;
             mods = <(MOD_RALT)>;
-            keep-mods = <(MOD_RALT)>;
         };
         colon_nobreak: colon_no_break {
             compatible = "zmk,behavior-mod-morph";
@@ -150,7 +224,7 @@
         td_btclr: td_bluetooth_clear {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&none>, <&bt BT_CLR_ALL>;
+            bindings = <&none>, <&bt BT_CLR>;
         };
 
         td_extcaps: tap_dance_ext_caps {
@@ -443,7 +517,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&ms_up_sc>, <&mmv MOVE_Y(-U_MS_SLOW_SPEED)>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_RALT)>;
         };
         ms_up_sc: mouse_up_scroll {
             compatible = "zmk,behavior-mod-morph";
@@ -455,7 +529,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&ms_left_sc>, <&mmv MOVE_X(-U_MS_SLOW_SPEED)>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_RALT)>;
         };
         ms_left_sc: mouse_left_scroll {
             compatible = "zmk,behavior-mod-morph";
@@ -467,7 +541,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&ms_right_sc>, <&mmv MOVE_X(U_MS_SLOW_SPEED)>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_RALT)>;
         };
         ms_right_sc: mouse_right_scroll {
             compatible = "zmk,behavior-mod-morph";
@@ -479,7 +553,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&ms_down_sc>, <&mmv MOVE_Y(U_MS_SLOW_SPEED)>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_RALT)>;
         };
         ms_down_sc: mouse_down_scroll {
             compatible = "zmk,behavior-mod-morph";

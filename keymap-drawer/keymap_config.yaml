@@ -139,6 +139,7 @@ parse_config:
     LCTRL: 'CTRL'
     LGUI: 'SUPER'
     RGUI: 'COMP'
+    RCTRL: '★'
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
@@ -179,7 +180,7 @@ parse_config:
     "&mmv MOVE_UP":
       tap: $$mdi:menu-up$$
       hold: ''
-      shifted: $$mdi:mouse$$
+      shifted: ''
     "&mmv MOVE_DOWN":
       tap: $$mdi:menu-down$$
       hold: ''
@@ -190,7 +191,14 @@ parse_config:
       tap: $$mdi:mouse-right-click-outline$$
     "&mkp MCLK":
       tap: $$mdi:mouse-scroll-wheel$$
-
+    "&mmv MOVE_Y(-U_MS_SLOW_SPEED)":
+      tap: ''
+    "&mmv MOVE_Y(U_MS_SLOW_SPEED)":
+      tap: ''
+    "&mmv MOVE_X(-U_MS_SLOW_SPEED)":
+      tap: ''
+    "&mmv MOVE_X(U_MS_SLOW_SPEED)":
+      tap: ''
     "&nav_adl MEDIA 0":
       tap: '▽'
       type: 'trans'
@@ -248,6 +256,8 @@ parse_config:
       tap:  'ALT TAB'
     "&altesc":
       tap:  'ALT ESC'
+    "&altgrv":
+      tap:  'ALT `'
     "&srch_nxt":
       tap:  'SEARCH NXT'
     "&srch_prv":
@@ -261,7 +271,10 @@ parse_config:
     "&td_btclr":
       tap:  'BT RESET'
       hold: '2 taps'
-
+    "&kp K_CANCEL":
+      tap: ""
+    "&kp RC(RALT)":
+      tap: "α"
     # Apps
     "&kp LC(LG(O))":
       tap:  'Trsm'
@@ -334,6 +347,11 @@ parse_config:
     "&bt BT_SEL 3":
       tap:  'BT ➍'
 
+    "&rg_layer_media":
+      align: top
+      key: 'LAYER ID'
+      layers: [ 'COLEMK' ]
+
   zmk_combos:
     combo_less_greater:
       key: '<>'
@@ -402,6 +420,15 @@ parse_config:
       key: '"'
     combo_soft_off:
       key: 'KB OFF'
+    combo_rgb_layer_colemak:
+      align: top
+      offset: 0.25
+      key: 'layer ind'
+      layers: [ 'COLEMK' ]
+    combo_rgb_layer_symbols:
+      layers: [ 'NAV' ]
+    combo_rgb_layer_media:
+      layers: [ 'NAV' ]
 
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []

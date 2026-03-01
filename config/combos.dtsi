@@ -47,13 +47,13 @@
             timeout-ms = <50>;
             key-positions = <LM1 LB1>;
             bindings = <&colon_nobreak>;
-            layers = <COLEMAK>;
+            layers = <COLEMAK SYMBOLS>;
         };
         combo_semi {
             timeout-ms = <50>;
             key-positions = <LM2 LB2>;
             bindings = <&semi_nobreak>;
-            layers = <COLEMAK>;
+            layers = <COLEMAK SYMBOLS>;
         };
         combo_excl {
             timeout-ms = <50>;
@@ -85,12 +85,6 @@
             bindings = <&kp BSPC>;
             layers = <COLEMAK SYMBOLS>;
         };
-        combo_escape {
-            timeout-ms = <50>;
-            key-positions = <LT1 LM1>;
-            bindings = <&kp ESC>;
-            layers = <COLEMAK SYMBOLS MEDIA>;
-        };
         combo_save {
             timeout-ms = <50>;
             key-positions = <LT3 LT2>;
@@ -121,9 +115,15 @@
             bindings = <&kp LC(Y)>;
             //layers = <COLEMAK>;
         };
+        combo_escape {
+            timeout-ms = <50>;
+            key-positions = <LT2 LM2>;
+            bindings = <&kp ESC>;
+            layers = <COLEMAK SYMBOLS MEDIA>;
+        };
         combo_vimcmd {
             timeout-ms = <50>;
-            key-positions = <LT0 LM0>;
+            key-positions = <LT1 LM1>;
             bindings = <&vimcmd>;
             layers = <COLEMAK>;
         };
