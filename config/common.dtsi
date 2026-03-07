@@ -60,6 +60,7 @@
 #define LCTRL_LGUI  &mt LCTRL LGUI
 #define TAB_L       &kp LC(LA(PG_UP))
 #define TAB_R       &kp LC(LA(PG_DN))
+#define COMPOSE     &kp SCROLLLOCK
 
 /* Application shortcuts */
 #define APP_FFOX    &kp LC(LG(W))

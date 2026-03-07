@@ -124,7 +124,7 @@ EXT_TAB    &none        &kp C_BRI_DN &kp C_BRI_UP  &none         &none          
             bindings = <
 &kp X      &ht_gt 0 0    &kp N7       &kp N8        &kp N9        &at_caret                        &kp UP                 &ht_amps 0 0 &ht_lpar 0 LPAR &ht_rpar 0 RPAR  &ht_lbrc 0 0 &kp RBRC    &kp BSPC
 &kp TAB    &hrl_dot LGUI 0 &hrl LALT N1 &hrl LSHFT N2 &hrl LCTRL N3 &ht_hash 0 HASH      &kp LEFT  &kp ENTER  &kp RIGHT   &ht_equl 0 0 &hrr LCTRL MINUS &hrr LSHFT PLUS &hrr_slsh LALT 0 &hrr_star LGUI 0 &kp ENTER
-LOCK_SYM   &ht_lt 0 0    &kp N4       &kp N5        &kp N6        &dlr_prc    &kp SPACE            &kp DOWN               &ht_excl 0 0 &kp UNDER     &ht_lbkt 0 LBKT    &kp RBKT     &ht_pipe 0 0 &kp RGUI
+LOCK_SYM   &ht_lt 0 0    &kp N4       &kp N5        &kp N6        &dlr_prc    &kp SPACE            &kp DOWN               &ht_excl 0 0 &kp UNDER     &ht_lbkt 0 LBKT    &kp RBKT     &ht_pipe 0 0 COMPOSE
                                                   NAV_ADL  &mt LSHIFT N0 &trans                                        &trans  &kp SPC  &trans
             >;
             sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;

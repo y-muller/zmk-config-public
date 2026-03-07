@@ -148,7 +148,7 @@ display-name= "EXTEND"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp ESC     &kp LC(W)   &kp LC(F)   &none       &kp INS         &kp HOME    &kp PGUP    &kp UP      &kp PGDN    GNOME
+                &kp ESC     &kp LC(W)   &kp LC(F)   COMPOSE     &kp INS         &kp HOME    &kp PGUP    &kp UP      &kp PGDN    GNOME
                 &sk LGUI    &sk LALT    &sk LSHFT   &sk LCTRL   SELECT          &kp END     &kp LEFT    &kp DOWN    &kp RIGHT   &kp BSPC
     &prv_wnd    &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(Y)       &kp LS(TAB) &kp TAB     &none       &kp LC(BSPC) &kp DEL    &kp ENTER
                                         &trans      &trans      &trans          &trans      &kp SPC     &trans
