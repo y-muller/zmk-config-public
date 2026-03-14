@@ -79,8 +79,8 @@
 
             bindings = <
 &kp ESC    &kp Q        &kp W        &kp F         &kp P         &kp B                           &kp UP                 &kp J        &kp L         &kp U        &kp Y        &kp SEMI    &kp BSPC
-MEDIA_TAB  &hrl LGUI A  &hrl LALT R  &hrl LSHFT S  &hrl LCTRL T  &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT   &kp M        &hrr LCTRL N  &hrr LSHFT E &hrr LALT I  &hrr LGUI O MEDIA_ENT
-LCTRL_LGUI &kp Z        &kp X        &kp C         &hrl RCTRL D  V_GREEK    &kp C_MUTE           &kp DOWN               K_GREEK      &hrr RCTRL H  &comm_grv    DOT_MACROS   SLASH_DIRS  &sqt_alt_gr
+MEDIA_TAB  &hrl LGUI A  &hrl LALT R  &hrl LSHFT S  &hrl LCTRL T  &hrl RALT G           &kp LEFT  &kp ENTER  &kp RIGHT   &hrr RALT M  &hrr LCTRL N  &hrr LSHFT E &hrr LALT I  &hrr LGUI O MEDIA_ENT
+LCTRL_LGUI &kp Z        &kp X        &kp C         &hrl RCTRL D  V_GREEK    &kp C_MUTE           &kp DOWN               K_GREEK      &hrr RCTRL H  &comm_grv    DOT_MACROS   SLASH_DIRS  &sqt_alt LALT SQT
                                                   NAV_ADL  &kp LSHIFT  EXT_CAPS                                 SYMB_ALTGR  TMUX_SPC  FUNC_ADR
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -178,18 +178,18 @@ LOCK_EXT    &kp LC(Z)    &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(Y)  &kp
             display-name = "FUNC";
 
             // ┌──────┬─────┬─────┬─────┬─────┬─────┐                ┏━━━━━┓         ┌─────┬─────┬─────┬─────┬─────┬──────┐
-            // │RESET │     │ F7  │ F8  │ F9  │ F12 │                ┃  ↑  ┃         │BTrst│ BT1 │ BT2 │ BT3 │ BT4 │RESET │
+            // │RESET │     │ F7  │ F8  │ F9  │ F12 │                ┃Bri+ ┃         │BTrst│ BT1 │ BT2 │ BT3 │ BT4 │RESET │
             // ├──────┼─────┼─────┼─────┼─────┼─────┤          ┏━━━━━┃━━━━━┃━━━━━┓   ├─────┼─────┼─────┼─────┼─────┼──────┤
-            // │ BOOT │     │ F1  │ F2  │ F3  │ F11 │          ┃  ←  ┃enter┃  →  ┃   │ RGB │Effct│Bri+-│     │     │ BOOT │
+            // │ BOOT │     │ F1  │ F2  │ F3  │ F11 │          ┃     ┃enter┃     ┃   │ RGB │Bri+-│Sat+-│Hue+-│Effct│ BOOT │
             // ├──────┼─────┼─────┼─────┼─────┼─────┤ ┏━━━━┓   ┗━━━━━┃━━━━━┃━━━━━┛   ├─────┼─────┼─────┼─────┼─────┼──────┤
-            // │      │     │ F4  │ F5  │ F6  │ F10 │ ┃MUTE┃         ┃  ↓  ┃         │SLEEP│     │     │     │     │      │
+            // │      │     │ F4  │ F5  │ F6  │ F10 │ ┃MUTE┃         ┃Bri- ┃         │SLEEP│     │     │     │     │      │
             // └──────┴─────┴─────┴───┬─┴───┬─┴───┬─┴─┺━┯━━┛         ┗━━━━━┛     ┌───┴─┬───┴─┬───┴─┬───┴─────┴─────┴──────┘
             //                        │     │     │     │                        │     │     │     │
             //                        └─────┴─────┴─────┘                        └─────┴─────┴─────┘
 
             bindings = <
 &none       &none        &kp F7       &kp F8        &kp F9        &kp F12                       &rgb_ug RGB_BRI        &td_btclr       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none
-&td_boot    &none        &kp F1       &kp F2        &kp F3        &kp F11             &rgb_ug RGB_EFR &kp ENTER &rgb_ug RGB_EFF &rgb_ug RGB_TOG &rgb_effect &rgb_bright &none  &none        &td_boot
+&td_boot    &none        &kp F1       &kp F2        &kp F3        &kp F11                 &none &kp ENTER   &none      &rgb_ug RGB_TOG &rgb_bright  &rgb_sat     &rgb_hue     &rgb_effect  &td_boot
 &none       &none        &kp F4       &kp F5        &kp F6        &kp F10  &kp LSFT             &rgb_ug RGB_BRD        &kp C_SLEEP     &none        &none        &none        &none        &none
                                                   &trans   &trans  &trans                                     &trans   &trans  &trans
             >;
@@ -200,19 +200,19 @@ LOCK_EXT    &kp LC(Z)    &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(Y)  &kp
             display-name = "TMUX";
 
             // ┌──────┬─────┬─────┬─────┬─────┬─────┐                ┏━━━━━┓         ┌─────┬─────┬─────┬─────┬─────┬──────┐
-            // │      │     │Lst W│     │     │     │                ┃  ↑  ┃         │     │Mv L │ Up  │Mv R │     │      │
+            // │      │     │Lst W│     │     │Rload│                ┃  ↑  ┃         │     │Mv L │ Up  │Mv R │SpltV│      │
             // ├──────┼─────┼─────┼─────┼─────┼─────┤          ┏━━━━━┃━━━━━┃━━━━━┓   ├─────┼─────┼─────┼─────┼─────┼──────┤
-            // │      │     │Rload│     │     │     │          ┃  ←  ┃     ┃  →  ┃   │     │ Prv │ Dwn │ Nxt │     │      │
+            // │      │SUPER│ ALT │ SFT │CTRL │     │          ┃  ←  ┃     ┃  →  ┃   │     │ Prv │ Dwn │ Nxt │     │      │
             // ├──────┼─────┼─────┼─────┼─────┼─────┤ ┏━━━━┓   ┗━━━━━┃━━━━━┃━━━━━┛   ├─────┼─────┼─────┼─────┼─────┼──────┤
-            // │ Zoom │P Exp│     │Crt W│     │     │ ┃    ┃         ┃  ↓  ┃         │     │CopyM│     │     │     │      │
+            // │ Zoom │P Exp│     │Crt W│     │     │ ┃    ┃         ┃  ↓  ┃         │     │CopyM│     │     │SpltH│      │
             // └──────┴─────┴─────┴───┬─┴───┬─┴───┬─┴─┺━┯━━┛         ┗━━━━━┛     ┌───┴─┬───┴─┬───┴─┬───┴─────┴─────┴──────┘
             //                        │     │     │     │                        │     │     │     │
             //                        └─────┴─────┴─────┘                        └─────┴─────┴─────┘
 
             bindings = <
-&none       &none        &tm_lsw      &none         &none         &none                         &tm_cup                 &tm_j    &tm_l    &tm_u     &tm_y     &none     &none
-&none       &kp LGUI     &tm_rcnf     &kp LALT      &kp LCTL      &none               &tm_clft  &none       &tm_crght   &tm_m    &tm_n    &tm_e     &tm_i     &none     &none
-&trans      &tm_z        &none        &tm_cw        &none         &none  &none                  &tm_cdn                 &none    &tm_cm   &none     &none     &none     &none
+&none       &none        &tm_lsw      &none         &none         &tm_rcnf                      &tm_cup                 &tm_j    &tm_MvL  &tm_u     &tm_MvR   &tm_spV   &none
+&none       &kp LGUI     &kp LALT     &kp LSHFT     &kp LCTRL     &none               &tm_clft  &none       &tm_crght   &tm_m    &tm_n    &tm_e     &tm_i     &none     &none
+&trans      &tm_z        &none        &tm_cw        &none         &none  &none                  &tm_cdn                 &tm_cmd  &tm_cm   &none     &none     &tm_spH   &none
                                                   &none    &trans    &none                                           &none   &none  &none
             >;
             sensor-bindings = <&rgb_encoder>;

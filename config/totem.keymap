@@ -72,8 +72,8 @@ display-name= "COLEMK"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp BSPC
-                &hrl LGUI A &hrl LALT R &hrl LSHFT S &hrl LCTRL T &kp G         &kp M       &hrr LCTRL N &hrr LSHFT E &hrr LALT I &hrr LGUI O
-    MEDIA_TAB   &kp Z       &kp X       &kp C       &hrl RCTRL D  V_GREEK       K_GREEK    &hrr RCTRL H  &comm_grv   DOT_MACROS  SLASH_DIRS    MEDIA_ENT
+                &hrl LGUI A &hrl LALT R &hrl LSHFT S &hrl LCTRL T &hrl RALT G   &hrr RALT M &hrr LCTRL N &hrr LSHFT E &hrr LALT I &hrr LGUI O
+    MEDIA_TAB   &kp Z       &kp X       &kp C       &hrl RCTRL D  V_GREEK       K_GREEK     &hrr RCTRL H  &comm_grv   DOT_MACROS  SLASH_DIRS    MEDIA_ENT
                                         NAV_ADL     &kp LSHIFT  EXT_CAPS        SYMB_ALTGR  TMUX_SPC    FUNC_ADR
                         >;
                 };

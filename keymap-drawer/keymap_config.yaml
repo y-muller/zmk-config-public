@@ -138,7 +138,8 @@ parse_config:
     LSHIFT: 'SHIFT'
     LCTRL: 'CTRL'
     LGUI: 'SUPER'
-    RGUI: 'COMP'
+    RGUI: 'LVL5'
+    SCROLLLOCK: 'COMP'
     RCTRL: '★'
 
     # Arrows

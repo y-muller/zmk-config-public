@@ -32,7 +32,7 @@ I am using these modules:
 - the `tmux` mode (Ctrl-A prefix) is replaced by a layer and is not as flexible or complete
 - layer locking is rather awkward (symbols, extend, media)
 - external display switching is missing 
-- the keymap-drawer config is still somewhat broken
+- the keymap-drawer config has a few remaining issues
 
 ### The layout
 
@@ -53,8 +53,12 @@ between the dev adaptive key and the leader key.
 Long press macros: holding `/` types `~/` or `../` with Shift, holding `.` starts a new sentence with a dot, a space and a sticky Shift. With Shift, holding `.` 
 types `~/workspace/`. Holding `Shift` `,` (backtick) starts a markdown code block with 3 backticks.
 
-A single tap on `AltGR` gives access to a sticky alternate symbols defined on the OS. All the accented characters to write in French, and
-much more, are present. Slightly outdated documentation is available [here](https://github.com/y-muller/personal_configs/blob/main/xkb/README.md).
+There is full support for an [eight level custom XKB layout](https://github.com/y-muller/personal_configs/blob/main/XKB.md).
+The holds on the `AltGr`, `★` and `α` keys access the different levels. Additionally `AltGr` is available as a sticky key on the right 
+thumb.
+
+`AltGr` provides all the accented characters to write in French, and much more. `★` has many more symbols and
+a few common emajis. `α` has all the Greek characters.
 
 ![symbols](keymap-drawer/eyelash_corne_symbols.svg)
 A long press on `(`, `{` or `[` closes the parenthesis or bracket and moves the cursor inside. A long press on `=`, `&`, `|` doubles the symbols,
@@ -81,8 +85,6 @@ Holding Alt slows down the mouse movements.
 ![func](keymap-drawer/eyelash_corne_func.svg)
 
 To connect to a new Bluetooth device, switch to the required BT number and double tap the `BT RESET` key to go into pairing mode.
-
-I have not mapped all the RGB keys yet. I don't use the feature to it doesn't matter.
 
 ### Combos
 ![colemak combos](keymap-drawer/eyelash_corne_colemak_combos.svg)

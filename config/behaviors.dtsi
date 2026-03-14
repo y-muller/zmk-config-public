@@ -147,13 +147,6 @@
             tapping-term-ms = <300>;
             bindings = <&greekhold>, <&greek>;
         };
-        sqt_alt_gr: sqt_alt_altgr {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sqt_alt LALT SQT>, <&greek_ht 0 0>;
-            mods = <(MOD_RALT)>;
-            keep-mods = <(MOD_RALT)>;
-        };
         sqt_alt: singlequote_alt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;

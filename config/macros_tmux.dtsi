@@ -1,52 +1,109 @@
 / {
-    macros {
-        // TMUX macros
-        tm_n: tmux_n {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
-                , <&macro_tap &kp N>
-                ;
-        };
-        tm_i: tmux_i {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
-                , <&macro_tap &kp I>
-                ;
-        };
+
+    behaviors {
         tm_u: tmux_u {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
-                , <&macro_tap &kp U>
-                ;
+            bindings = <&tm_up_sup>, <&tm_cup>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+        tm_n: tmux_n {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&tm_lft_slft>, <&tm_clft>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
         tm_e: tmux_e {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&tm_dn_sdn>, <&tm_cdn>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+        tm_i: tmux_i {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&tm_rgt_srgt>, <&tm_crght>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        tm_up_sup: tmux_up_or_shift_up {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&tm_up>, <&tm_sup>;
+            mods = <(MOD_LSFT)>;
+        };
+        tm_lft_slft: tmux_right_or_shift_left {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&tm_left>, <&tm_slft>;
+            mods = <(MOD_LSFT)>;
+        };
+        tm_dn_sdn: tmux_down_or_shift_down {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&tm_down>, <&tm_sdn>;
+            mods = <(MOD_LSFT)>;
+        };
+        tm_rgt_srgt: tmux_right_or_shift_right {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&tm_right>, <&tm_srgt>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
+    macros {
+        // TMUX macros
+        tm_left: tmux_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
-                , <&macro_tap &kp E>
+                , <&macro_tap &kp LEFT>
                 ;
         };
-        tm_l: tmux_l {
+        tm_right: tmux_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
-                , <&macro_tap &kp L>
+                , <&macro_tap &kp RIGHT>
                 ;
         };
-        tm_y: tmux_y {
+        tm_up: tmux_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
-                , <&macro_tap &kp Y>
+                , <&macro_tap &kp UP>
+                ;
+        };
+        tm_down: tmux_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp DOWN>
+                ;
+        };
+        tm_MvL: tmux_move_window_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp LT>
+                ;
+        };
+        tm_MvR: tmux_move_window_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp GT>
                 ;
         };
         tm_j: tmux_j {
@@ -89,12 +146,36 @@
                 , <&macro_tap &kp C>
                 ;
         };
+        tm_spV: tmux_split_window_vert {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp MINUS>
+                ;
+        };
+        tm_spH: tmux_split_window_horiz {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp PIPE>
+                ;
+        };
         tm_lsw: tmux_list_windows {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
                 , <&macro_tap &kp W>
+                ;
+        };
+        tm_cmd: tmux_command {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_tap &kp COLON>
                 ;
         };
         tm_rcnf: tmux_reload_config {
@@ -105,40 +186,71 @@
                 , <&macro_tap &kp R>
                 ;
         };
+
+        // Ctrl is already pressed and passed to the macro
         tm_clft: tmux_ctrl_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTL>, <&macro_tap &kp A>
+                = <&macro_tap &kp A>
                 , <&macro_tap &kp LEFT>
-                , <&macro_release &kp LCTL>
                 ;
         };
         tm_crght: tmux_ctrl_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTL>, <&macro_tap &kp A>
+                = <&macro_tap &kp A>
                 , <&macro_tap &kp RIGHT>
-                , <&macro_release &kp LCTL>
                 ;
         };
         tm_cup: tmux_ctrl_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTL>, <&macro_tap &kp A>
+                = <&macro_tap &kp A>
                 , <&macro_tap &kp UP>
-                , <&macro_release &kp LCTL>
                 ;
         };
         tm_cdn: tmux_ctrl_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTL>, <&macro_tap &kp A>
+                = <&macro_tap &kp A>
                 , <&macro_tap &kp DOWN>
-                , <&macro_release &kp LCTL>
+                ;
+        };
+
+        tm_slft: tmux_shift_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_press &kp RSFT>, <&macro_tap &kp LEFT>, <&macro_release &kp RSFT>
+                ;
+        };
+        tm_srgt: tmux_shift_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_press &kp RSFT>, <&macro_tap &kp RIGHT>, <&macro_release &kp RSFT>
+                ;
+        };
+        tm_sup: tmux_shift_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_press &kp RSFT>, <&macro_tap &kp UP>, <&macro_release &kp RSFT>
+                ;
+        };
+        tm_sdn: tmux_shift_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL>, <&macro_tap &kp A>, <&macro_release &kp LCTL>
+                , <&macro_press &kp RSFT>, <&macro_tap &kp DOWN>, <&macro_release &kp RSFT>
                 ;
         };
 
