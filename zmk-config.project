@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="zmk-config" Version="11000" InternalType="">
   <VirtualDirectory Name="docs">
+    <File Name="TMUX.md"/>
     <File Name="TOTEM.md"/>
     <File Name="LEADER_KEY.md"/>
     <File Name="ADAPTIVE.md"/>

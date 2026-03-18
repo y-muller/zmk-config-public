@@ -99,3 +99,6 @@ Tapping AltGr before the long press outputs guillemets `«»`.
 
 Tapping AltGr before the hyphen `-` combo types a non-breakable hyphen. AltGr before the colon `:` or semi-colon `;` combos types a non-breakable space
 followed by the `:` or `;` and a normal space.
+
+### Tmux
+There is an extra layer with some macros to make [tmux](TMUX.md) easier and faster to use.

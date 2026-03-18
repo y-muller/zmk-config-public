@@ -12,3 +12,5 @@ keymap -c keymap-drawer/keymap_config.yaml draw -s FUNC -j config/eyelash_corne.
 
 keymap -c keymap-drawer/keymap_config.yaml draw -s COLEMK --combos-only -j config/eyelash_corne.json keymap-drawer/eyelash_corne.yaml > keymap-drawer/eyelash_corne_colemak_combos.svg
 
+keymap -c keymap-drawer/keymap_config.yaml draw -s TMUX -j config/eyelash_corne.json keymap-drawer/eyelash_corne.yaml > keymap-drawer/eyelash_corne_tmux.svg
+
